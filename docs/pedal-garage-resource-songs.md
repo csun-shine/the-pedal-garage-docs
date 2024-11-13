@@ -17,7 +17,7 @@ The Pedal Garage ships with existing database of songs. Users can also add songs
 
 ## Resource properties
 
-Sample `pedals` resource
+Sample `songs` resource
 
 ```js
 
