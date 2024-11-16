@@ -4,7 +4,7 @@ layout: page
 
 # API Reference
 
-Returns all [`pedals`](pedal.md) within the database.
+Returns all [`pedals`](pedals.md) within the database.
 
 ## URL
 
@@ -12,13 +12,9 @@ Returns all [`pedals`](pedal.md) within the database.
 {base_url}/pedals
 ```
 
-## Params
-
-None
-
 ## Request headers
 
-None
+Content-Type: application/json
 
 ## Request body
 
@@ -40,6 +36,17 @@ None
 ]
 ```
 
+## Return Parameters
+
+| Name | Type | Description |
+| ------------- | ----------- | ----------- |
+| `id` | number | The ID of the pedal resource to which songs are attached |
+| `make` | string | The make of the pedal |
+| `model` | string | The model of the pedal |
+| `trim` | string | The trim of the pedal, if applicable |
+| `family` | string | The family the pedal belongs to |
+| `songIDs` | number | The song IDs attached to this particular pedal resource |
+
 ## Return status
 
 | Status value | Return status | Description |
@@ -50,6 +57,6 @@ None
 
 ## Related Topics
 
-* [`Pedals`](pedal.md)
-* [`Get pedals by ID`](get-pedals-by-ID.md)
-* [`Get songs by ID`](get-songs-by-id.md)
+* [`Pedals`](pedals.md)
+* [`Get pedal by ID`](pg-reference-get-pedal-by-id.md)
+* [`Get song by ID`](pg-reference-get-song-by-id.md)
