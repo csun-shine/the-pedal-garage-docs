@@ -32,6 +32,22 @@ None
         "label": "Fiction", 
         "pedalIDs": [6,7]
       },
+      {
+        "id": 2, 
+        "name": "New Year's Day",
+        "artist": "U2",
+        "year": 1983,
+        "label": "Island", 
+        "pedalIDs": [5,8]
+      },
+      {
+        "id": 3, 
+        "name": "That Lady, Pts. 1 & 2",
+        "artist": "The Isley Brothers",
+        "year": "1964",
+        "label": "United Artists", 
+        "pedalIDs": [1,2]
+      } 
     ...
 ]
 ```

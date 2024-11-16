@@ -31,6 +31,62 @@ None
         "trim": "Ram's Head",
         "family": "fuzz",
         "songIDs": [3]
+      },
+      {
+        "id": 2, 
+        "make": "Maestro",
+        "model": "PS-1A Phase Shifter",
+        "trim": "",
+        "family": "phaser", 
+        "songIDs": [3]
+      },
+      {
+        "id": 3, 
+        "make": "Dunlop",
+        "model": "Cry Baby",
+        "trim": "Classic",
+        "family": "wah", 
+        "songIDs": [3]
+      }, 
+      {
+        "id": 4, 
+        "make": "MXR",
+        "model": "Dyna Comp Compressor",
+        "trim": "",
+        "family": "compressor", 
+        "songIDs": []
+      }, 
+      {
+        "id": 5, 
+        "make": "Electro-Harmonix",
+        "model": "Memory Man",
+        "trim": "Deluxe",
+        "family": "delay", 
+        "songIDs": [2]
+      }, 
+      {
+        "id": 6, 
+        "make": "Boss",
+        "model": "CE-2W",
+        "trim": "Waza Craft",
+        "family": "Chorus", 
+        "songIDs": [1]
+      }, 
+      {
+        "id": 7, 
+        "make": "Boss",
+        "model": "DM-2W",
+        "trim": "Waza Craft",
+        "family": "Delay", 
+        "songIDs": [1]
+      }, 
+      {
+        "id": 8, 
+        "make": "Boss",
+        "model": "Super Overdrive SD-1",
+        "trim": "",
+        "family": "overdrive", 
+        "songIDs": [2]
       }
     ...
 ]
