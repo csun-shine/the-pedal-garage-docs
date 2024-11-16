@@ -63,6 +63,14 @@
         "trim": "",
         "family": "overdrive", 
         "songIDs": [2]
+      }, 
+      {
+        "id": 9, 
+        "make": "MXR",
+        "model": "M117R",
+        "trim": "",
+        "family": "flanger", 
+        "songIDs": [4]
       }
     ], 
     "songs": [
@@ -89,6 +97,14 @@
         "year": "1964",
         "label": "United Artists", 
         "pedalIDs": [1,2]
-      } 
+      }, 
+      {
+        "id": 4, 
+        "name": "Barracuda",
+        "artist": "Heart",
+        "year": "1977",
+        "label": "Portrait", 
+        "pedalIDs": [8,9]
+      }
     ]
   }
