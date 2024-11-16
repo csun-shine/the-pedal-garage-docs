@@ -4,7 +4,7 @@ layout: page
 
 # API Reference
 
-Returns a [`pedal`](pedal.md) array that contains only the pedal resource specified by the `id` parameter, if it exists.
+Returns a [`pedal`](pedals.md) array that contains only the pedal resource specified by the `id` parameter, if it exists.
 
 ## URL
 
@@ -12,7 +12,7 @@ Returns a [`pedal`](pedal.md) array that contains only the pedal resource specif
 {base_url}/pedals/{id}
 ```
 
-## Params
+## Parameters
 
 | Parameter name | Type | Description |
 | ------------- | ----------- | ----------- |
@@ -20,7 +20,7 @@ Returns a [`pedal`](pedal.md) array that contains only the pedal resource specif
 
 ## Request headers
 
-None
+Content-Type: application/json
 
 ## Request body
 
@@ -42,6 +42,17 @@ None
 ]
 ```
 
+## Return Parameters
+
+| Name | Type | Description |
+| ------------- | ----------- | ----------- |
+| `id` | number | The ID of the pedal resource to which songs are attached |
+| `make` | string | The make of the pedal |
+| `model` | string | The model of the pedal |
+| `trim` | string | The trim of the pedal, if applicable |
+| `family` | string | The family the pedal belongs to |
+| `songIDs` | number | The song IDs attached to this particular pedal resource |
+
 ## Return status
 
 | Status value | Return status | Description |
@@ -52,6 +63,6 @@ None
 
 ## Related Topics
 
-* [`Pedals`](pedal.md)
-* [`Get all pedals`](get-all-pedals.md)
-* [`Get songs by ID`](songs-get-songs-by-id.md)
+* [`Pedals`](pedals.md)
+* [`Get all pedals`](pg-reference-get-all-pedals.md)
+* [`Get songs by ID`](pg-reference-get-songs-by-id.md)
