@@ -30,13 +30,28 @@ Content-Type: application/json
 ## Request body
 
 ```js
-[input]
+curl -XPOST 
+-H "Content-type: application/json" 
+-d '{
+"make": "MXR",
+"model": "M117R",
+"trim": "",
+"family": "flanger",
+"songIDs": [4]
+}' http://localhost:3000/pedals
 ```
 
 ## Return body
 
 ```js
-[input]
+{
+  "make": "MXR",
+  "model": "M117R",
+  "trim": "",
+  "family": "flanger",
+  "songIDs": [4],
+  "id": 9
+}
 ```
 
 ## Return status
