@@ -30,13 +30,28 @@ Content-Type: application/json
 ## Request body
 
 ```js
-[input]
+curl -XPOST 
+-H "Content-type: application/json" 
+-d '{
+"name": "Barracuda",
+"artist": "Heart",
+"year": "1997",
+"label": "Portrait",
+"pedalIDs": [8,9]
+}' http://localhost:3000/songs
 ```
 
 ## Return body
 
 ```js
-[input]
+{
+  "name": "Barracuda",
+  "artist": "Heart",
+  "year": "1997",
+  "label": "Portrait",
+  "pedalIDs": [8,9],
+  "id": 4
+}
 ```
 
 ## Return status
