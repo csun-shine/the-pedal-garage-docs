@@ -10,14 +10,14 @@ If http://localhost:3000 is not your server's base address, then replace {base_u
 ## Resources
 
 * Pedal Resource 
-  - [Get pedal by pedal ID]()
-  - [Get all pedals]()
-  - [Add pedals]()
-  - [Delete pedals]()
-  - [Update pedals]()
+  - [Get pedal by pedal ID](pg-reference-get-pedal-by-id.md)
+  - [Get all pedals](pg-reference-get-all-pedals.md)
+  * [Add pedals](pg-reference-adding-pedals.md)
+  - [Delete pedals](pg-reference-deleting-pedals.md)
+  - [Update pedals](pg-reference-updating-pedals.md)
 * Song Resource
-  - [Get song by song ID]()
-  - [Get all songs]()
-  - [Add songs]()
-  - [Delete songs]()
-  - [Update songs]()
+  - [Get song by song ID](pg-reference-get-song-by-id.md)
+  - [Get all songs](pg-reference-get-all-songs.md)
+  - [Add songs](pg-reference-adding-songs.md)
+  - [Delete songs](pg-reference-deleting-songs.md)
+  - [Update songs](pg-reference-updating-songs.md)
