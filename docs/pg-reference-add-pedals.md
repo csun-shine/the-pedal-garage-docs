@@ -4,7 +4,7 @@ layout: page
 
 # API Reference
 
-Adding [`pedals`](pedals.md) to the database.
+Adding [`pedals`](pg-resource-pedals.md) to the database.
 
 ## URL
 
@@ -64,6 +64,6 @@ curl -XPOST
 
 ## Related Topics
 
-* [`Pedals`](pedals.md)
-* [`Adding songs`](pg-reference-adding-songs.md)
+* [`Pedals`](pg-resource-pedals.md)
+* [`Add songs`](pg-reference-add-songs.md)
 * [`Get pedal by ID`](pg-reference-get-pedal-by-id.md)

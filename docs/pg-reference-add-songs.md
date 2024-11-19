@@ -4,7 +4,7 @@ layout: page
 
 # API Reference
 
-Adding [`songs`](songs.md) to the database.
+Adding [`songs`](pg-resource-songs.md) to the database.
 
 ## URL
 
@@ -64,6 +64,6 @@ curl -XPOST
 
 ## Related Topics
 
-* [`Songs`](songs.md)
-* [`Adding pedals`](pg-reference-adding-pedals.md)
+* [`Songs`](pg-resource-songs.md)
+* [`Add pedals`](pg-reference-add-pedals.md)
 * [`Get song by ID`](pg-reference-get-song-by-id.md)
