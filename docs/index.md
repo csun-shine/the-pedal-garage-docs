@@ -11,7 +11,7 @@ All the guides and tutorials you'll need to start building straight away! [Quick
 
 ## Reference
 
-Detailed reference documents for working with the Pedal Garage platform. [API Reference](api-reference.md)
+Detailed reference documents for working with the Pedal Garage platform. [API Reference](API-reference.md)
 
 ## Explore
 
