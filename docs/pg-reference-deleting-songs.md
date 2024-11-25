@@ -25,18 +25,18 @@ Deleting [`songs`](songs.md) from the database.
 
 ## Request headers
 
-Content-Type: application/json
+None
 
 ## Request body
 
 ```js
-[input]
+curl -X DELETE https://{base_url}/pedals/{song-id}
 ```
 
 ## Return body
 
 ```js
-[input]
+{}
 ```
 
 ## Return status
