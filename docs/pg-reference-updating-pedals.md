@@ -9,7 +9,7 @@ Updating [`pedals`](pedals.md) in the database.
 ## URL
 
 ```shell
-{base_url}/pedals
+curl -X PATCH {base_url}/pedals/{pedal_ID}
 ```
 
 ## Parameters
@@ -30,13 +30,23 @@ Content-Type: application/json
 ## Request body
 
 ```js
-[input]
+-H Content-Type: application/json 
+-d '{"key1:": "value1", "key2", "value2"}'
 ```
 
-## Return body
+## Return body example
 
 ```js
-[input]
+{
+  "id": 1,
+  "make": "Electro-Harmonix",
+  "model": "Big Muff",
+  "trim": "Ram's Head",
+  "family": "fuzz",
+  "songIDs": [
+    3
+  ]
+}
 ```
 
 ## Return status

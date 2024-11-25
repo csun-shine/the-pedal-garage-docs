@@ -9,7 +9,7 @@ Updating [`songs`](songs.md) in the database.
 ## URL
 
 ```shell
-{base_url}/songs
+curl -X PATCH {base_url}/songs/{song_ID}
 ```
 
 ## Parameters
@@ -30,13 +30,21 @@ Content-Type: application/json
 ## Request body
 
 ```js
-[input]
+-H Content-Type: application/json 
+-d '{"key1:": "value1", "key2", "value2"}'
 ```
 
-## Return body
+## Return body example
 
 ```js
-[input]
+{
+  "id": 1,
+  "name": "Just Like Heaven",
+  "artist": "The Cure",
+  "year": 1987,
+  "label": "Fiction",
+  "pedalIDs": "[6,7]"
+}
 ```
 
 ## Return status
