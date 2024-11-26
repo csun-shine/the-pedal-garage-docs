@@ -73,7 +73,7 @@ json-server --watch the-pedal-garage-db-source.json
 [input]
 ```
 
-6. Run the curl command given in Step 3 to retrieve the songs for whichever song you want.
+6. Run the curl command given in Step 3 to retrieve the songs for whichever pedal you want.
 
 ## Get Songs by PedalID - Postman
 
@@ -107,12 +107,12 @@ json-server --watch the-pedal-garage-db-source.json
 
 | Name | Type | Description |
 | ------------- | ----------- | ----------- |
-| `id` | number | The ID of the pedal resource to which songs are attached |
-| `make` | string | The make of the pedal |
-| `model` | string | The model of the pedal |
-| `trim` | string | The trim of the pedal, if applicable |
-| `family` | string | The family the pedal belongs to |
-| `songIDs` | number | The song IDs attached to this particular pedal resource |
+| `id` | number | The ID of the song resource to which pedals are attached |
+| `name` | string | The name of the song |
+| `artist` | string | The name of the artist |
+| `year` | number | The year the song was released |
+| `label` | string | The label that published the song |
+| `pedalIDs` | number | The pedal IDs attached to this particular song resource |
 
 ## Return Status
 
