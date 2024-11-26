@@ -23,18 +23,20 @@ curl -X PATCH {base_url}/pedals/{pedal_ID}
 | `family` | string | The family the pedal belongs to |
 | `songIDs` | number | The song IDs attached to this particular pedal resource |
 
-## Request headers
+## Request Headers
 
 Content-Type: application/json
 
-## Request body
+## Request Body Example
 
 ```js
--H Content-Type: application/json 
--d '{"key1:": "value1", "key2", "value2"}'
+{
+  "family:": "fuzz", 
+  "songIDs", [3]
+}
 ```
 
-## Return body example
+## Return Body Example
 
 ```js
 {
@@ -49,7 +51,7 @@ Content-Type: application/json
 }
 ```
 
-## Return status
+## Return Status
 
 | Status value | Return status | Description |
 | ------------- | ----------- | ----------- |

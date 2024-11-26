@@ -23,31 +23,33 @@ curl -X PATCH {base_url}/songs/{song_ID}
 | `label` | string | The label that published the song |
 | `pedalIDs` | number | The pedal IDs attached to this particular song resource |
 
-## Request headers
+## Request Headers
 
 Content-Type: application/json
 
-## Request body
+## Request Body Example
 
 ```js
--H Content-Type: application/json 
--d '{"key1:": "value1", "key2", "value2"}'
+{
+  "year:": "1987", 
+  "pedalIDs:" [6,7]
+  }
 ```
 
-## Return body example
+## Return Body Example
 
 ```js
 {
   "id": 1,
   "name": "Just Like Heaven",
   "artist": "The Cure",
-  "year": 1987,
+  "year": "1987",
   "label": "Fiction",
-  "pedalIDs": "[6,7]"
+  "pedalIDs": [6,7]
 }
 ```
 
-## Return status
+## Return Status
 
 | Status value | Return status | Description |
 | ------------- | ----------- | ----------- |
