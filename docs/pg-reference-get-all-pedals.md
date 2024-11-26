@@ -12,15 +12,26 @@ Returns all [`pedals`](pedals.md) within the database.
 {base_url}/pedals
 ```
 
-## Request headers
+## Parameters
+
+| Name | Type | Description |
+| ------------- | ----------- | ----------- |
+| `id` | number | The ID of the pedal resource to which songs are attached |
+| `make` | string | The make of the pedal |
+| `model` | string | The model of the pedal |
+| `trim` | string | The trim of the pedal, if applicable |
+| `family` | string | The family the pedal belongs to |
+| `songIDs` | number | The song IDs attached to this particular pedal resource |
+
+## Request Headers
 
 Content-Type: application/json
 
-## Request body
+## Request Body Example
 
 None
 
-## Return body
+## Return Body Example
 
 ```js
 [
@@ -92,18 +103,7 @@ None
 ]
 ```
 
-## Return Parameters
-
-| Name | Type | Description |
-| ------------- | ----------- | ----------- |
-| `id` | number | The ID of the pedal resource to which songs are attached |
-| `make` | string | The make of the pedal |
-| `model` | string | The model of the pedal |
-| `trim` | string | The trim of the pedal, if applicable |
-| `family` | string | The family the pedal belongs to |
-| `songIDs` | number | The song IDs attached to this particular pedal resource |
-
-## Return status
+## Return Status
 
 | Status value | Return status | Description |
 | ------------- | ----------- | ----------- |
