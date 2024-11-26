@@ -37,7 +37,7 @@ None
 {}
 ```
 
-## Return status
+## Return Status
 
 | Status value | Return status | Description |
 | ------------- | ----------- | ----------- |
