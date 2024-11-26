@@ -52,7 +52,7 @@ Content-Type: application/json
 }
 ```
 
-## Return status
+## Return Status
 
 | Status value | Return status | Description |
 | ------------- | ----------- | ----------- |
