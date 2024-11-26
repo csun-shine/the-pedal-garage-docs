@@ -7,18 +7,18 @@ layout: page
 
 ## Start Building Now
 
-All the guides and tutorials you'll need to start building straight away! [Quickstart](pedal-garage-before-you-start.md)
+Everything you need to start building straight away! [Quickstart](pedal-garage-before-you-start.md)
 
 ## Reference
 
 Detailed reference documents for working with the Pedal Garage platform. [API Reference](API-reference.md)
 
-## Explore
+## Tutorials
 
-Learn how to do common tasks within the Pedal Garage platform! Make sure to reference the [Quickstart](pedal-garage-before-you-start.md) guide first to set up your development system for these tutorials. 
+Learn how to do common tasks within The Pedal Garage platform! Make sure to reference the [Quickstart](pedal-garage-before-you-start.md) guide first to set up your development system for these tutorials.
 
-* Learn to match song to pedals: [Match song to pedals](tutorials/match-song-to-pedals.md)
-* Learn to match pedal to songs: [Match pedal to songs](tutorials/match-pedal-to-songs.md)
+* Learn how to retrieve pedals by songID: [Get Pedals by SongID](pg-tutorial-get-pedals-by-songID.md)
+* Learn how to retrieve songs by pedalID: [Get Songs by PedalID](pg-tutorial-get-songs-by-pedalID.md)
 
 ## Support
 
