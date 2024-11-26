@@ -14,19 +14,24 @@ Returns a [`song`](songs.md) array that contains only the pedal resource specifi
 
 ## Parameters
 
-| Parameter name | Type | Description |
+| Name | Type | Description |
 | ------------- | ----------- | ----------- |
-| `id` | number | The song's unique record ID |
+| `id` | number | The ID of the song resource to which pedals are attached |
+| `name` | string | The name of the song |
+| `artist` | string | The name of the artist |
+| `year` | number | The year the song was released |
+| `label` | string | The label that published the song |
+| `pedalIDs` | number | The pedal IDs attached to this particular song resource |
 
-## Request headers
+## Request Headers
 
 Content-Type: application/json
 
-## Request body
+## Request Body Example
 
 None
 
-## Return body
+## Return Body Example
 
 ```js
 [
@@ -42,18 +47,7 @@ None
 ]
 ```
 
-## Return Parameters
-
-| Name | Type | Description |
-| ------------- | ----------- | ----------- |
-| `id` | number | The ID of the song resource to which pedals are attached |
-| `name` | string | The name of the song |
-| `artist` | string | The name of the artist |
-| `year` | number | The year the song was released |
-| `label` | string | The label that published the song |
-| `pedalIDs` | number | The pedal IDs attached to this particular song resource |
-
-## Return status
+## Return Status
 
 | Status value | Return status | Description |
 | ------------- | ----------- | ----------- |
