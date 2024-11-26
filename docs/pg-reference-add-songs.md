@@ -9,7 +9,7 @@ Adding [`songs`](pg-resource-songs.md) to the database.
 ## URL
 
 ```shell
-{base_url}/songs
+curl -XPOST {base_url}/songs
 ```
 
 ## Parameters
@@ -23,25 +23,23 @@ Adding [`songs`](pg-resource-songs.md) to the database.
 | `label` | string | The label that published the song |
 | `pedalIDs` | number | The pedal IDs attached to this particular song resource |
 
-## Request headers
+## Request Headers
 
 Content-Type: application/json
 
-## Request body
+## Request Body Example
 
 ```js
-curl -XPOST 
--H "Content-type: application/json" 
--d '{
+{
 "name": "Barracuda",
 "artist": "Heart",
 "year": "1997",
 "label": "Portrait",
 "pedalIDs": [8,9]
-}' http://localhost:3000/songs
+}
 ```
 
-## Return body
+## Return Body Example
 
 ```js
 {
@@ -54,7 +52,7 @@ curl -XPOST
 }
 ```
 
-## Return status
+## Return Status
 
 | Status value | Return status | Description |
 | ------------- | ----------- | ----------- |
