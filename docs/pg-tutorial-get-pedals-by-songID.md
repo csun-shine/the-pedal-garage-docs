@@ -49,34 +49,6 @@ json-server --watch the-pedal-garage-db-source.json
   Watching...
 ```
 
-## Determining song
-
-1. Determine which song you would like to find the pedals for and note down its songID. For example, say you are interested in the pedals for "That Lady, Pts. 1 & 2". '
-
-2. Open the repo in another Git Bash window following one of the two methods explained in the "Running JSON server" section. Run the following command to retrieve the song from the database (refer to the "Get songs by parameters other than ID" reference document for more information if needed).
-
-```shell
-curl -X GET "http://localhost:3000/songs?name=That%20Lady%2C%20Pts.%201%20%26%202" -H "Accept: application/json"
-```
-
-1. The response should look like the following. And from this response, we can see that the song ID is 3.
-
-```shell
-[
-  {
-    "id": 3,
-    "name": "That Lady, Pts. 1 & 2",
-    "artist": "The Isley Brothers",
-    "year": "1964",
-    "label": "United Artists",
-    "pedalIDs": [
-      1,
-      2
-    ]
-  }
-]
-```
-
 ## Get pedals by songID - curl
 
 1. If you have not done so, run the JSON server following the steps given in the "Running JSON server" section.
