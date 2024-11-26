@@ -9,7 +9,7 @@ Adding [`pedals`](pg-resource-pedals.md) to the database.
 ## URL
 
 ```shell
-{base_url}/pedals
+curl -XPOST {base_url}/pedals
 ```
 
 ## Parameters
@@ -23,25 +23,23 @@ Adding [`pedals`](pg-resource-pedals.md) to the database.
 | `family` | string | The family the pedal belongs to |
 | `songIDs` | number | The song IDs attached to this particular pedal resource |
 
-## Request headers
+## Request Headers
 
 Content-Type: application/json
 
-## Request body
+## Request Body Example
 
 ```js
-curl -XPOST 
--H "Content-type: application/json" 
--d '{
-"make": "MXR",
-"model": "M117R",
-"trim": "",
-"family": "flanger",
-"songIDs": [4]
-}' http://localhost:3000/pedals
+{
+  "make": "MXR", 
+  "model": "M117R", 
+  "trim": "", 
+  "family": "flanger", 
+  "songIDs": [4]
+}
 ```
 
-## Return body
+## Return Body Example
 
 ```js
 {
