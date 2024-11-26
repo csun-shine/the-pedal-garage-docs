@@ -51,15 +51,15 @@ json-server --watch the-pedal-garage-db-source.json
 
 ## Determining song
 
-1. Determine which song you would like to find the pedals for and note down its songID.
-   
-2. For example, say you are interested in the pedals for "That Lady, Pts. 1 & 2". Run the following command to retrieve the song from the database (refer to the "Get songs by parameters other than ID" reference document for more information if needed).
+1. Determine which song you would like to find the pedals for and note down its songID. For example, say you are interested in the pedals for "That Lady, Pts. 1 & 2". '
+
+2. Open the repo in another Git Bash window following one of the two methods explained in the "Running JSON server" section. Run the following command to retrieve the song from the database (refer to the "Get songs by parameters other than ID" reference document for more information if needed).
 
 ```shell
 curl -X GET "http://localhost:3000/songs?name=That%20Lady%2C%20Pts.%201%20%26%202" -H "Accept: application/json"
 ```
 
-3. The response should look like the following. And from this response, we can see that the song ID is 3.
+1. The response should look like the following. And from this response, we can see that the song ID is 3.
 
 ```shell
 [
@@ -77,7 +77,7 @@ curl -X GET "http://localhost:3000/songs?name=That%20Lady%2C%20Pts.%201%20%26%20
 ]
 ```
 
-## Get songs by pedal - curl
+## Get pedals by songID - curl
 
 1. If you have not done so, run the JSON server following the steps given in the "Running JSON server" section.
 
@@ -132,48 +132,19 @@ curl -X GET "http://localhost:3000/songs?name=That%20Lady%2C%20Pts.%201%20%26%20
 ]
 ```
 
-1. Run the curl command given in Step 5 to retrieve the songs for whichver pedal you want.
+5. Run the curl command given in Step 5 to retrieve the songs for whichver pedal you want.
 
-## Get songs by pedal - Postman
+## Get pedals by songID - Postman
 
-1. There are a couple of different methods to open the Pedal Garage in a Git Bash window.
+1. If you have not done so, run the JSON server following the steps given in the "Running JSON server" section.
 
-    Method 1: The first method is through the Git Hub desktop application. Make sure you are in the Pedal Garage repo, then click "Repository" in the navigation menu at the top. From the drop down menu, select "Open in Git Bash". This opens the main folder. Navigate to the api folder by running the `cd api` command.
+2. Leave the JSON server running and open the Postman application.
 
-    Method 2: Alternativley you can open the repo in Git Bash through the locally saved folder. Open whichever folder the Pedal Garage API is saved in. Select and right click the "api" sub-folder and select the "Open in Git Bash" option. This method automatically opens the api folder within Git Bash.
+3. Either open a new request window or use whatever previous work environemtns and collections you have set up.
 
-2. In the Git Bash window you have opened, run the JSON server by entering the following command.
-   
-```shell
-json-server --watch the-pedal-garage-db-source.json
-```
+4. Select the "GET" method in the request box drop down menu.
 
-3. If you have successfully started the JSON server, the response should look like the following:
-
-```shell
-  \{^_^}/ hi!
-
-  Loading pedal-garage-db-source.json
-  Done
-
-  Resources
-  http://localhost:3000/pedals
-  http://localhost:3000/songs
-
-  Home
-  http://localhost:3000
-
-  Type s + enter at any time to create a snapshot of the database
-  Watching...
-```
-
-4. Leave the JSON server running and open the Postman application.
-
-5. Either open a new request window or use whatever previous work environemtns and collections you have set up.
-
-6. Select the "GET" method in the request box drop down menu.
-
-7. In the request box, input the following. If you do not have an environemnt set up with a `{base_url}`, type out the base URL directly into the request box.
+5. In the request box, input the following. If you do not have an environemnt set up with a `{base_url}`, type out the base URL directly into the request box.
 
 ```shell
 {{base_url}}/pedals 
@@ -245,6 +216,6 @@ json-server --watch the-pedal-garage-db-source.json
 
 Congratulations! You've completed the "Get Pedals by SongID" tutorial. Explore other tutorials and related references below:
 
-* [`Get Pedals by SongID`](tutorial-get-pedals-by-songID.md)
+* [`Get Songs by PedalID`](tutorial-get-songs-by-pedalID.md)
 * [`Songs`](pg-reference-songs.md)
 * [`Pedals`](pg-reference-pedals.md)
