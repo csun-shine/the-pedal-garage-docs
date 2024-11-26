@@ -9,7 +9,7 @@ Deleting [`songs`](songs.md) from the database.
 ## URL
 
 ```shell
-{base_url}/songs
+curl -X DELETE {base_url}/songs/{song_ID}
 ```
 
 ## Parameters
@@ -23,15 +23,13 @@ Deleting [`songs`](songs.md) from the database.
 | `label` | string | The label that published the song |
 | `pedalIDs` | number | The pedal IDs attached to this particular song resource |
 
-## Request headers
+## Request Headers
 
 None
 
-## Request body
+## Request Body
 
-```js
-curl -X DELETE https://{base_url}/pedals/{song-id}
-```
+None
 
 ## Return body
 

@@ -9,7 +9,7 @@ Deleting [`pedals`](pedals.md) from the database.
 ## URL
 
 ```shell
-{base_url}/pedals
+curl -X DELETE {base_url}/pedals/{pedal_ID}
 ```
 
 ## Parameters
@@ -23,17 +23,15 @@ Deleting [`pedals`](pedals.md) from the database.
 | `family` | string | The family the pedal belongs to |
 | `songIDs` | number | The song IDs attached to this particular pedal resource |
 
-## Request headers
+## Request Headers
 
 None
 
-## Request body
+## Request Body
 
-```js
-curl -X DELETE https://{base_url}/pedals/{pedal-id}
-```
+None
 
-## Return body
+## Return Body
 
 ```js
 {}
