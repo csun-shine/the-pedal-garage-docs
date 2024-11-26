@@ -27,11 +27,11 @@ curl -X DELETE {base_url}/songs/{song_ID}
 
 None
 
-## Request Body
+## Request Body Example
 
 None
 
-## Return body
+## Return Body Example
 
 ```js
 {}

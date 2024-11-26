@@ -27,11 +27,11 @@ curl -X DELETE {base_url}/pedals/{pedal_ID}
 
 None
 
-## Request Body
+## Request Body Example
 
 None
 
-## Return Body
+## Return Body Example
 
 ```js
 {}
