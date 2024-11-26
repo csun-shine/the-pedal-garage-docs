@@ -61,13 +61,13 @@ json-server --watch the-pedal-garage-db-source.json
 {base_url}/pedals?songIDs={songID}
 ```
 
-3. For example, if we wanted to retrieve the pedals associated with songID 3:
+4. For example, if we wanted to retrieve the pedals associated with songID 3:
 
 ```shell
 {base_url}/pedals?songIDs=3
 ```
 
-4. The response would look like:
+5. The response would look like:
 
 ```shell
 [
@@ -104,7 +104,7 @@ json-server --watch the-pedal-garage-db-source.json
 ]
 ```
 
-5. Run the curl command given in Step 5 to retrieve the songs for whichver pedal you want.
+6. Run the curl command given in Step 5 to retrieve the songs for whichver pedal you want.
 
 ## Get pedals by songID - Postman
 
@@ -122,13 +122,13 @@ json-server --watch the-pedal-garage-db-source.json
 {{base_url}}/pedals 
 ```
 
-8. Under the "Key" column of the "Query Params" section, input `songIDs`.
+6. Under the "Key" column of the "Query Params" section, input `songIDs`.
 
-9.  Under the "Value" column of the "Query Params" section, input the ID of whichever song you want to retrieve the pedals for. For example, put 3 if you want to retrieve the pedals for songID 3.
-    
-10. Click "Send".
+7. Under the "Value" column of the "Query Params" section, input the ID of whichever song you want to retrieve the pedals for. For example, put 3 if you want to retrieve the pedals for songID 3.
 
-11. Response body should be populated with all pedals associated with songID 3 like below:
+8. Click "Send".
+
+9.  Response body should be populated with all pedals associated with songID 3 like below:
 
 ```shell
 [
