@@ -10,13 +10,13 @@ This tutorial will walk you through the steps on how to get songs by pedal. You 
 
 Expect this tutorial to take 15 minutes to complete.
 
-## Before you start
+## Before You Start
 
 Make sure you have completed the "Before you start" tuturial and set up your development system prior to proceeding with this tutorial.
 
 Having a basic understanding of how curl commands work and the Postman application functionality will be helpful.
 
-## Running JSON server
+## Running JSON Server
 
 1. There are a couple of different methods to open the Pedal Garage in a Git Bash window.
 
@@ -49,11 +49,11 @@ json-server --watch the-pedal-garage-db-source.json
   Watching...
 ```
 
-## Get pedals by songID - curl
+## Get Pedals by SongID - curl
 
 1. If you have not done so, run the JSON server following the steps given in the "Running JSON server" section.
 
-2. Leave the JSON server running and open the repo again in another Git Bash window using one of the two methods explained in Step 1. For this, it does not matter which directory is opened.
+2. Leave the JSON server running and open the repo again in another Git Bash window using one of the two methods explained in the "Running JSON Server" section. For this, it does not matter which directory is opened.
    
 3. Run the following curl command. Replace `{base_url}` with the base URL or directory where your API is hosted.
 
@@ -104,9 +104,9 @@ json-server --watch the-pedal-garage-db-source.json
 ]
 ```
 
-6. Run the curl command given in Step 5 to retrieve the songs for whichver pedal you want.
+6. Run the curl command given in Step 3 to retrieve the songs for whichver pedal you want.
 
-## Get pedals by songID - Postman
+## Get Pedals by SongID - Postman
 
 1. If you have not done so, run the JSON server following the steps given in the "Running JSON server" section.
 
@@ -165,6 +165,8 @@ json-server --watch the-pedal-garage-db-source.json
 ]
 ```
 
+6. Adjust the value in the "Value" column and send the request to retrieve the songs for whichver pedal you want.
+
 ## Parameters
 
 | Name | Type | Description |
@@ -176,7 +178,7 @@ json-server --watch the-pedal-garage-db-source.json
 | `family` | string | The family the pedal belongs to |
 | `songIDs` | number | The song IDs attached to this particular pedal resource |
 
-## Return status
+## Return Status
 
 | Status value | Return status | Description |
 | ------------- | ----------- | ----------- |
