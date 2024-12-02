@@ -2,9 +2,9 @@
 layout: page
 ---
 
-# Tutorial: Get Pedals by SongID
+# Tutorial: Get Songs by PedalID
 
-One of the core features of this API is the ability to retrieve a list of pedals associated with a songID.
+One of the core features of this API is the ability to retrieve a list of songs associated with a pedalID.
 
 This tutorial will walk you through the steps on how to get songs by pedal. You can use either curl via the command line or Postman.
 
@@ -16,7 +16,7 @@ Make sure you have completed the "Before you start" tuturial and set up your dev
 
 Having a basic understanding of how curl commands work and the Postman application functionality will be helpful.
 
-## Running JSON Server
+## Running JSON server
 
 1. There are a couple of different methods to open the Pedal Garage in a Git Bash window.
 
@@ -49,7 +49,7 @@ json-server --watch the-pedal-garage-db-source.json
   Watching...
 ```
 
-## Get Pedals by SongID - curl
+## Get Songs by PedalID - curl
 
 1. If you have not done so, run the JSON server following the steps given in the "Running JSON server" section.
 
@@ -58,55 +58,24 @@ json-server --watch the-pedal-garage-db-source.json
 3. Run the following curl command. Replace `{base_url}` with the base URL or directory where your API is hosted.
 
 ```shell
-{base_url}/pedals?songIDs={songID}
+{base_url}/songs?pedalIDs={pedalID}
 ```
 
-4. For example, if we wanted to retrieve the pedals associated with songID 3:
+4. For example, if we wanted to retrieve the songs associated with pedalID 3:
 
 ```shell
-{base_url}/pedals?songIDs=3
+{base_url}/songs?pedalIDs=3
 ```
 
 5. The response would look like:
 
 ```shell
-[
-  {
-    "id": 1,
-    "make": "Electro-Harmonix",
-    "model": "Big Muff",
-    "trim": "Ram's Head",
-    "family": "fuzz",
-    "songIDs": [
-      3
-    ]
-  },
-  {
-    "id": 2,
-    "make": "Maestro",
-    "model": "PS-1A Phase Shifter",
-    "trim": "",
-    "family": "phaser",
-    "songIDs": [
-      3
-    ]
-  },
-  {
-    "id": 3,
-    "make": "Dunlop",
-    "model": "Cry Baby",
-    "trim": "Classic",
-    "family": "wah",
-    "songIDs": [
-      3
-    ]
-  }
-]
+[input]
 ```
 
-6. Run the curl command given in Step 3 to retrieve the songs for whichver pedal you want.
+6. Run the curl command given in Step 3 to retrieve the songs for whichever pedal you want.
 
-## Get Pedals by SongID - Postman
+## Get Songs by PedalID - Postman
 
 1. If you have not done so, run the JSON server following the steps given in the "Running JSON server" section.
 
@@ -119,64 +88,31 @@ json-server --watch the-pedal-garage-db-source.json
 5. In the request box, input the following. If you do not have an environemnt set up with a `{base_url}`, type out the base URL directly into the request box.
 
 ```shell
-{{base_url}}/pedals 
+{{base_url}}/songs 
 ```
 
-6. Under the "Key" column of the "Query Params" section, input `songIDs`.
+6. Under the "Key" column of the "Query Params" section, input `pedalIDs`.
 
-7. Under the "Value" column of the "Query Params" section, input the ID of whichever song you want to retrieve the pedals for. For example, put 3 if you want to retrieve the pedals for songID 3.
+7. Under the "Value" column of the "Query Params" section, input the ID of whichever pedal you want to retrieve the songs for. For example, put 3 if you want to retrieve the songs for pedalID 3.
 
 8. Click "Send".
 
-9.  Response body should be populated with all pedals associated with songID 3 like below:
+9. Response body should be populated with all songs associated with pedalID 3 like below:
 
 ```shell
-[
-  {
-    "id": 1,
-    "make": "Electro-Harmonix",
-    "model": "Big Muff",
-    "trim": "Ram's Head",
-    "family": "fuzz",
-    "songIDs": [
-      3
-    ]
-  },
-  {
-    "id": 2,
-    "make": "Maestro",
-    "model": "PS-1A Phase Shifter",
-    "trim": "",
-    "family": "phaser",
-    "songIDs": [
-      3
-    ]
-  },
-  {
-    "id": 3,
-    "make": "Dunlop",
-    "model": "Cry Baby",
-    "trim": "Classic",
-    "family": "wah",
-    "songIDs": [
-      3
-    ]
-  }
-]
+[input]
 ```
-
-6. Adjust the value in the "Value" column and send the request to retrieve the songs for whichver pedal you want.
 
 ## Parameters
 
 | Name | Type | Description |
 | ------------- | ----------- | ----------- |
-| `id` | number | The ID of the pedal resource to which songs are attached |
-| `make` | string | The make of the pedal |
-| `model` | string | The model of the pedal |
-| `trim` | string | The trim of the pedal, if applicable |
-| `family` | string | The family the pedal belongs to |
-| `songIDs` | number | The song IDs attached to this particular pedal resource |
+| `id` | number | The ID of the song resource to which pedals are attached |
+| `name` | string | The name of the song |
+| `artist` | string | The name of the artist |
+| `year` | number | The year the song was released |
+| `label` | string | The label that published the song |
+| `pedalIDs` | number | The pedal IDs attached to this particular song resource |
 
 ## Return Status
 
@@ -190,6 +126,6 @@ json-server --watch the-pedal-garage-db-source.json
 
 Congratulations! You've completed the "Get Pedals by SongID" tutorial. Explore other tutorials and related references below:
 
-* [`Get Songs by PedalID`](tutorial-get-songs-by-pedalID.md)
+* [`Get Pedals by SongID`](tutorial-get-pedals-by-songID.md)
 * [`Songs`](pg-reference-songs.md)
 * [`Pedals`](pg-reference-pedals.md)
