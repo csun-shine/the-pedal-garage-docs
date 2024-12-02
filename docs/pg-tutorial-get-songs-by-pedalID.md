@@ -94,7 +94,7 @@ json-server --watch the-pedal-garage-db-source.json
 6. Under the "Key" column of the "Query Params" section, input `pedalIDs`.
 
 7. Under the "Value" column of the "Query Params" section, input the ID of whichever pedal you want to retrieve the songs for. For example, put 3 if you want to retrieve the songs for pedalID 3.
-    
+
 8. Click "Send".
 
 9. Response body should be populated with all songs associated with pedalID 3 like below:
@@ -126,6 +126,6 @@ json-server --watch the-pedal-garage-db-source.json
 
 Congratulations! You've completed the "Get Pedals by SongID" tutorial. Explore other tutorials and related references below:
 
-* [`Get Songs by PedalID`](tutorial-get-songs-by-pedalID.md)
+* [`Get Pedals by SongID`](tutorial-get-pedals-by-songID.md)
 * [`Songs`](pg-reference-songs.md)
 * [`Pedals`](pg-reference-pedals.md)
