@@ -2,22 +2,21 @@
 layout: page
 ---
 
-# `pedals` resource
+# Pedals Resource
 
-Base endpoint:
+The `pedals` resource represents the collection of pedals available in The Pedal Garage API database. The Pedal Garage includes a pre-existing database of pedals, which can be retrieved, added to, updated, or deleted through the API. This resource page provides an overview of the available endpoints for the `pedals` resource, along with links to detailed reference pages for each operation. The resource page also includes explanations of resource properties and information on common response codes and error handling.
 
-```shell
+## Available Endpoints
 
-{base_url}/pedals
-```
+* [Retrieve All Pedals](pg-reference-get-all-pedals.md): Fetch a complete list of all pedals in the databse.
+* [Retrieve Pedals by ID](pg-reference-get-pedal-by-id.md): Get detailed information about a specific pedal using its unique ID.
+* [Add a New Pedal](pg-reference-add-pedals.md): Add a new pedal to the database.
+* [Update an Existing Pedal](pg-reference-updating-pedals.md): Modify details of an exisiting pedal.
+* [Delete a Pedal](pg-reference-deleting-pedals.md): Remove a pedal from the database.
 
-Contains information about pedals stored for the users of the Pedal Garage.
+## Resource Properties
 
-The Pedal Garage ships with existing database of pedals. Users can also add pedals - see [Add Pedals](pedal-garage-add-pedals.md) tutorial.
-
-## Resource properties
-
-Sample `pedals` resource
+Example `pedals` resource
 
 ```js
 
@@ -40,8 +39,12 @@ Sample `pedals` resource
 | `family` | string | The family the pedal belongs to |
 | `songIDs` | number | The song IDs attached to this particular pedal resource |
 
-## READ
+## Response Codes
 
-* [Match pedal to songs](pedal-garage-tutorial-match-pedal-to-songs.md)
-* [Match song to pedals](pedal-garage-tutorial-match-song-to-pedals.md)
-* [Add pedals](pedal-garage-tutorial-add-pedals.md)
+| Status value | Return status | Description |
+| ------------- | ----------- | ----------- |
+| 200 | Success | Requested data returned successfully |
+| 404 | Error | Specified task record not found |
+|  ECONNREFUSED | N/A | Service is offline. Start the service and try again. |
+
+## Error Handling
