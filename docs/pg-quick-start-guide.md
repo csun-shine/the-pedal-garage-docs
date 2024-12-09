@@ -4,7 +4,7 @@ layout: page
 
 # Quick Start Guide
 
-This guide will walk you through the steps of making your first requests with The Pedal Garage API.
+Ready to dive in? This guide will walk you through the steps of making your first requests with The Pedal Garage API!
 
 ## Before You Begin
 
@@ -14,23 +14,104 @@ Having a basic understanding of how curl commands work and the Postman applicati
 
 Expect this guide to take about 20 minutes to complete.
 
-## Make Your First API Request
+## Retrieve a Specific Pedal by ID
 
+**Endpoint**
 
+To retrieve details about a specific pedal, use the `GET /pedals/{id}` endpoint.
+
+**Request Example**
+
+```shell
+curl -GET http://localhost:3000/pedals/1
+```
+
+**Return Example**
+
+[
+      {
+        "id": 1, 
+        "make": "Electro-Harmonix",
+        "model": "Big Muff",
+        "trim": "Ram's Head",
+        "family": "fuzz",
+        "songIDs": [3]
+      }
+]
+
+## Add a Pedal
+
+**Endpoint**
+
+To add a pedal to the database, use the `POST /pedals` endpoint.
+
+**Request Example**
+
+```shell
+curl -XPOST http://localhost:3000/pedals \
+-H "Content-Type: application/json" \
+-d '{
+  "id": "null"
+  "make": "MXR", 
+  "model": "M117R", 
+  "trim": "", 
+  "family": "flanger", 
+  "songIDs": [4]
+}'
+```
+
+**Return Example**
+
+```shell
+[
+  {
+    "id": 9,
+    "make": "MXR",
+    "model": "M117R",
+    "trim": "",
+    "family": "flanger",
+    "songIDs": [4]
+  }
+]
+```
+
+## Search for Songs by Pedal
+
+**Endpoint**
+
+To search for songs by pedal, use the `GET /songs?pedalIDs_like={pedalID}` endpoint.
+
+**Request Example**
+
+```shell
+curl -GET http://localhost:3000/songs?pedalIDs_like=1
+```
+
+**Return Example**
+
+[
+      {
+        "id": 1, 
+        "make": "Electro-Harmonix",
+        "model": "Big Muff",
+        "trim": "Ram's Head",
+        "family": "fuzz",
+        "songIDs": [3]
+      }
+]
 
 ## Error Handling
 
-If you don't see the list of pedals, or receive an error in any step of the procedure, investigate and correct the error before continuing.
 Some common situations that cause errors include:
 
-1. You mistyped a command.
-2. You aren't in the correct directory.
+1. Mistyping a command.
+2. Being in the incorrect directory.
 3. A required software component didn't install correctly.
 4. A required software component isn't up to date.
 
 ## Next Steps
 
- Congratulations on completing the Quick Start Guide! Below are links to tutorials for some key features of the API as well as the API Reference page:
+ Congratulations on completing the Quick Start Guide! Below are links to tutorials for some key features of the API as well as the API Reference page. Happy coding!
 
 * [Get Pedals by SongID](pg-tutorial-get-pedals-by-songID.md)
 * [Get Songs by PedalID](pg-tutorial-get-songs-by-pedalID.md)
