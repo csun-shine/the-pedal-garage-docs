@@ -4,7 +4,7 @@ layout: page
 
 # API Reference: Retrieve All Pedals
 
-Returns all [`pedals`](pedals.md) within the database.
+Returns all [`pedals`](pg-resource-pedals.md) within the database.
 
 ## Endpoint
 
@@ -20,30 +20,30 @@ curl -X GET http://localhost:3000/pedals
 
 ```shell
 [
-      {
-        "id": 1, 
-        "make": "Electro-Harmonix",
-        "model": "Big Muff",
-        "trim": "Ram's Head",
-        "family": "fuzz",
-        "songIDs": [3]
-      },
-      {
-        "id": 2, 
-        "make": "Maestro",
-        "model": "PS-1A Phase Shifter",
-        "trim": "",
-        "family": "phaser", 
-        "songIDs": [3]
-      },
-      {
-        "id": 3, 
-        "make": "Dunlop",
-        "model": "Cry Baby",
-        "trim": "Classic",
-        "family": "wah", 
-        "songIDs": [3]
-      }, 
+  {
+    "id": 1, 
+    "make": "Electro-Harmonix",
+    "model": "Big Muff",
+    "trim": "Ram's Head",
+    "family": "fuzz",
+    "songIDs": [3]
+  },
+  {
+    "id": 2, 
+    "make": "Maestro",
+    "model": "PS-1A Phase Shifter",
+    "trim": "",
+    "family": "phaser", 
+    "songIDs": [3]
+  },
+  {
+    "id": 3, 
+    "make": "Dunlop",
+    "model": "Cry Baby",
+    "trim": "Classic",
+    "family": "wah", 
+    "songIDs": [3]
+  }, 
     ...
 ]
 ```
@@ -76,3 +76,7 @@ curl -X GET http://localhost:3000/pedals
 * [`Pedals`](pg-resource-pedals.md)
 * [`Get pedal by ID`](pg-reference-get-pedal-by-id.md)
 * [`Get song by ID`](pg-reference-get-song-by-id.md)
+
+## Need Help?
+
+We're here to help! For assistance, feel free to contact developer support at pedalgaragesupport@example.com.
