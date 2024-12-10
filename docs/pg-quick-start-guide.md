@@ -12,7 +12,7 @@ If you have not done so already, make sure to have your development environment 
 
 Having a basic understanding of how curl commands work and the Postman application functionality will be helpful.
 
-Expect this guide to take about 20 minutes to complete.
+Expect this guide to take about 15 minutes to complete.
 
 ## Retrieve a Specific Pedal by ID
 
@@ -51,10 +51,10 @@ To add a pedal to the database, use the `POST /pedals` endpoint.
 curl -XPOST http://localhost:3000/pedals \
 -H "Content-Type: application/json" \
 -d '{
-  "id": "null"
+  "id": null,
   "make": "MXR", 
   "model": "M117R", 
-  "trim": "", 
+  "trim": "NA", 
   "family": "flanger", 
   "songIDs": [4]
 }'
@@ -68,7 +68,7 @@ curl -XPOST http://localhost:3000/pedals \
     "id": 9,
     "make": "MXR",
     "model": "M117R",
-    "trim": "",
+    "trim": "NA",
     "family": "flanger",
     "songIDs": [4]
   }
@@ -89,16 +89,18 @@ curl -GET http://localhost:3000/songs?pedalIDs_like=1
 
 **Return Example**
 
+```shell
 [
-      {
-        "id": 1, 
-        "make": "Electro-Harmonix",
-        "model": "Big Muff",
-        "trim": "Ram's Head",
-        "family": "fuzz",
-        "songIDs": [3]
-      }
+  {
+    "id": 3,
+    "name": "That Lady, Pts. 1 & 2",
+    "artist": "The Isley Brothers",
+    "year": "1964",
+    "label": "United Artists",
+    "pedalIDs": [1,2]
+  }
 ]
+```
 
 ## Error Handling
 
