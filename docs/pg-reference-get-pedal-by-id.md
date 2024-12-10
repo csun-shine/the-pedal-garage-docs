@@ -2,17 +2,36 @@
 layout: page
 ---
 
-# API Reference
+# API Reference: Retrieve Pedal by PedalID
 
 Returns a [`pedal`](pedals.md) array that contains only the pedal resource specified by the `id` parameter, if it exists.
 
-## URL
+## Endpoint
+
+To retrieve details about a specific pedal, use the `GET /pedals/{id}` endpoint.
+
+## Request Example
 
 ```shell
-{base_url}/pedals/{id}
+curl -X GET http://localhost:3000/pedals/1
 ```
 
-## Parameters
+## Return Body Example
+
+```shell
+[
+  {
+    "id": 1, 
+    "make": "Electro-Harmonix",
+    "model": "Big Muff",
+    "trim": "Ram's Head",
+    "family": "fuzz",
+    "songIDs": [3]
+  }
+]
+```
+
+## Resource Properties
 
 | Name | Type | Description |
 | ------------- | ----------- | ----------- |
@@ -23,40 +42,24 @@ Returns a [`pedal`](pedals.md) array that contains only the pedal resource speci
 | `family` | string | The family the pedal belongs to |
 | `songIDs` | number | The song IDs attached to this particular pedal resource |
 
-## Request Headers
+## Common Response Codes
 
-Content-Type: application/json
-
-## Request Body Example
-
-None
-
-## Return Body Example
-
-```js
-[
-      {
-        "id": 1, 
-        "make": "Electro-Harmonix",
-        "model": "Big Muff",
-        "trim": "Ram's Head",
-        "family": "fuzz",
-        "songIDs": [3]
-      }
-    ...
-]
-```
-
-## Return Status
-
-| Status value | Return status | Description |
-| ------------- | ----------- | ----------- |
-| 200 | Success | Requested data returned successfully |
-| 404 | Error | Specified task record not found |
-|  ECONNREFUSED | N/A | Service is offline. Start the service and try again. |
+| Status Code      | Category       | Description | Troubleshooting Tips |
+|------------------|----------------|-------------|----------------------|
+| 200 OK           | Success        | The request was successful. | Not Applicable |
+| 201 Created      | Success        | A resource was successfully created. | Not Applicable |
+| 204 No Content   | Success        | The request succeeded, but no content is returned. | Check the API documentation if content is expected. |
+| 400 Bad Request  | Error   | The server could not understand the request. | Check for malformed syntax, invalid input, or missing fields in the request. |
+| 404 Not Found    | Error   | The resource could not be found. | Confirm the URL is correct and the resource exists. |
+| 500 Internal Server Error | Error | A generic error occurred on the server. | Start the service and try again. |
+| ECONNREFUSED | Error | Service is offline. | Start the service and try again. |
 
 ## Related Topics
 
-* [`Pedals`](pedals.md)
+* [`Pedals`](pg-resource-pedals.md)
 * [`Get all pedals`](pg-reference-get-all-pedals.md)
-* [`Get songs by ID`](pg-reference-get-songs-by-id.md)
+* [`Get songs by ID`](pg-reference-get-song-by-id.md)
+
+## Need Help?
+
+We're here to help! For assistance, feel free to contact developer support at pedalgaragesupport@example.com.
