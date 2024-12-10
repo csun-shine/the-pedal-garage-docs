@@ -2,38 +2,23 @@
 layout: page
 ---
 
-# API Reference
+# API Reference: Retrieve All Pedals
 
 Returns all [`pedals`](pedals.md) within the database.
 
-## URL
+## Endpoint
+
+To retrieve all pedals in the databse, use the `GET /pedals` endpoint.
+
+## Request Example
 
 ```shell
-{base_url}/pedals
+curl -X GET http://localhost:3000/pedals
 ```
-
-## Parameters
-
-| Name | Type | Description |
-| ------------- | ----------- | ----------- |
-| `id` | number | The ID of the pedal resource to which songs are attached |
-| `make` | string | The make of the pedal |
-| `model` | string | The model of the pedal |
-| `trim` | string | The trim of the pedal, if applicable |
-| `family` | string | The family the pedal belongs to |
-| `songIDs` | number | The song IDs attached to this particular pedal resource |
-
-## Request Headers
-
-Content-Type: application/json
-
-## Request Body Example
-
-None
 
 ## Return Body Example
 
-```js
+```shell
 [
       {
         "id": 1, 
@@ -59,60 +44,35 @@ None
         "family": "wah", 
         "songIDs": [3]
       }, 
-      {
-        "id": 4, 
-        "make": "MXR",
-        "model": "Dyna Comp Compressor",
-        "trim": "",
-        "family": "compressor", 
-        "songIDs": []
-      }, 
-      {
-        "id": 5, 
-        "make": "Electro-Harmonix",
-        "model": "Memory Man",
-        "trim": "Deluxe",
-        "family": "delay", 
-        "songIDs": [2]
-      }, 
-      {
-        "id": 6, 
-        "make": "Boss",
-        "model": "CE-2W",
-        "trim": "Waza Craft",
-        "family": "Chorus", 
-        "songIDs": [1]
-      }, 
-      {
-        "id": 7, 
-        "make": "Boss",
-        "model": "DM-2W",
-        "trim": "Waza Craft",
-        "family": "Delay", 
-        "songIDs": [1]
-      }, 
-      {
-        "id": 8, 
-        "make": "Boss",
-        "model": "Super Overdrive SD-1",
-        "trim": "",
-        "family": "overdrive", 
-        "songIDs": [2]
-      }
     ...
 ]
 ```
 
-## Return Status
+## Resource Properties
 
-| Status value | Return status | Description |
+| Name | Type | Description |
 | ------------- | ----------- | ----------- |
-| 200 | Success | Requested data returned successfully |
-| 404 | Error | Specified task record not found |
-|  ECONNREFUSED | N/A | Service is offline. Start the service and try again. |
+| `id` | number | The ID of the pedal resource to which songs are attached |
+| `make` | string | The make of the pedal |
+| `model` | string | The model of the pedal |
+| `trim` | string | The trim of the pedal, if applicable |
+| `family` | string | The family the pedal belongs to |
+| `songIDs` | number | The song IDs attached to this particular pedal resource |
+
+## Common Response Codes
+
+| Status Code      | Category       | Description | Troubleshooting Tips |
+|------------------|----------------|-------------|----------------------|
+| 200 OK           | Success        | The request was successful. | Not Applicable |
+| 201 Created      | Success        | A resource was successfully created. | Not Applicable |
+| 204 No Content   | Success        | The request succeeded, but no content is returned. | Check the API documentation if content is expected. |
+| 400 Bad Request  | Error   | The server could not understand the request. | Check for malformed syntax, invalid input, or missing fields in the request. |
+| 404 Not Found    | Error   | The resource could not be found. | Confirm the URL is correct and the resource exists. |
+| 500 Internal Server Error | Error | A generic error occurred on the server. | Start the service and try again. |
+| ECONNREFUSED | Error | Service is offline. | Start the service and try again. |
 
 ## Related Topics
 
-* [`Pedals`](pedals.md)
+* [`Pedals`](pg-resource-pedals.md)
 * [`Get pedal by ID`](pg-reference-get-pedal-by-id.md)
 * [`Get song by ID`](pg-reference-get-song-by-id.md)

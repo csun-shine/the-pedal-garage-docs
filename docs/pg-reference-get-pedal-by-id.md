@@ -2,7 +2,7 @@
 layout: page
 ---
 
-# API Reference: Retrieve Pedal by PedalID
+# API Reference: Retrieve Pedal by ID
 
 Returns a [`pedal`](pedals.md) array that contains only the pedal resource specified by the `id` parameter, if it exists.
 
