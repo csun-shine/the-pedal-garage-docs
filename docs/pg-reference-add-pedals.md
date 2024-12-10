@@ -25,6 +25,12 @@ curl -X POST http://localhost:3000/pedals \
   }'
 ```
 
+*Notes*:
+* To ensure the `id` field is placed at the beginning of the object and matches existing database entries, include it in your request. Otherwise, the `id` field will automatically be populated at the end of the object. 
+* Setting the `id` to null will trigger the system to generate a new, chronologically sequential identifier for the object.
+* Nonapplicable fields may be left blank or placeholder text (i.e., NA) included.
+
+
 ## Return Body Example
 
 ```shell
