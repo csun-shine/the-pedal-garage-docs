@@ -2,17 +2,36 @@
 layout: page
 ---
 
-# API Reference
+# API Reference: Retrieve Song by ID
 
-Returns a [`song`](songs.md) array that contains only the pedal resource specified by the `id` parameter, if it exists.
+Retrieve a [`song`](pg-resource-songs.md) array that contains only the song resource specified by the `id` parameter, if it exists.
 
-## URL
+## Endpoint
+
+To retrieve details about a specific song, use the `GET /songs/{id}` endpoint.
+
+## Request Example
 
 ```shell
-{base_url}/songs/{id}
+curl -X GET http://localhost:3000/songs/1
 ```
 
-## Parameters
+## Return Body Example
+
+```shell
+[
+  {
+    "id": 1, 
+    "name": "Just Like Heaven",
+    "artist": "The Cure",
+    "year": 1987,
+    "label": "Fiction", 
+    "pedalIDs": [6,7]
+  },
+]
+```
+
+## Resource Properties
 
 | Name | Type | Description |
 | ------------- | ----------- | ----------- |
@@ -23,40 +42,24 @@ Returns a [`song`](songs.md) array that contains only the pedal resource specifi
 | `label` | string | The label that published the song |
 | `pedalIDs` | number | The pedal IDs attached to this particular song resource |
 
-## Request Headers
+## Common Response Codes
 
-Content-Type: application/json
-
-## Request Body Example
-
-None
-
-## Return Body Example
-
-```js
-[
-      {
-        "id": 1, 
-        "name": "Just Like Heaven",
-        "artist": "The Cure",
-        "year": 1987,
-        "label": "Fiction", 
-        "pedalIDs": [6,7]
-      },
-    ...
-]
-```
-
-## Return Status
-
-| Status value | Return status | Description |
-| ------------- | ----------- | ----------- |
-| 200 | Success | Requested data returned successfully |
-| 404 | Error | Specified task record not found |
-|  ECONNREFUSED | N/A | Service is offline. Start the service and try again. |
+| Status Code      | Category       | Description | Troubleshooting Tips |
+|------------------|----------------|-------------|----------------------|
+| 200 OK           | Success        | The request was successful. | Not Applicable |
+| 201 Created      | Success        | A resource was successfully created. | Not Applicable |
+| 204 No Content   | Success        | The request succeeded, but no content is returned. | Check the API documentation if content is expected. |
+| 400 Bad Request  | Error   | The server could not understand the request. | Check for malformed syntax, invalid input, or missing fields in the request. |
+| 404 Not Found    | Error   | The resource could not be found. | Confirm the URL is correct and the resource exists. |
+| 500 Internal Server Error | Error | A generic error occurred on the server. | Start the service and try again. |
+| ECONNREFUSED | Error | Service is offline. | Start the service and try again. |
 
 ## Related Topics
 
-* [`Songs`](song.md)
+* [`Songs`](pg-resource-songs.md)
 * [`Get all songs`](pg-reference-get-all-songs.md)
 * [`Get pedal by ID`](pg-reference-get-pedal-by-id.md)
+
+## Need Help?
+
+We're here to help! For assistance, feel free to contact developer support at pedalgaragesupport@example.com.
