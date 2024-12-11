@@ -4,7 +4,7 @@ layout: page
 
 # API Reference: Retrieve All Pedals
 
-Returns all [`pedals`](pg-resource-pedals.md) within the database.
+Retrieves all [`pedals`](pg-resource-pedals.md) within the database.
 
 ## Endpoint
 

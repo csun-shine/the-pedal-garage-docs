@@ -2,9 +2,9 @@
 layout: page
 ---
 
-# API Reference: Updating an Existing Pedal
+# API Reference: Update an Existing Pedal
 
-Updates an existing [`pedal`](pg-resource-pedals.md) in the database.
+Update an existing [`pedal`](pg-resource-pedals.md) in the database.
 
 ## Endpoint
 

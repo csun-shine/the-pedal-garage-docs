@@ -4,7 +4,7 @@ layout: page
 
 # API Reference: Add A New Pedal
 
-Adds a new [`pedals`](pg-resource-pedals.md) to the database.
+Add a new [`pedal`](pg-resource-pedals.md) to the database.
 
 ## Endpoint
 

@@ -2,9 +2,9 @@
 layout: page
 ---
 
-# API Reference: Deleting a Pedal
+# API Reference: Delete a Pedal
 
-Deleting a [`pedal`](pg-resource-pedals.md) from the database.
+Delete a [`pedal`](pg-resource-pedals.md) from the database.
 
 ## Endpoint
 
