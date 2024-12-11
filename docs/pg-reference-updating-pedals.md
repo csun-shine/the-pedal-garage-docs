@@ -2,17 +2,39 @@
 layout: page
 ---
 
-# API Reference
+# API Reference: Update an Existing Pedal
 
-Updating [`pedals`](pedals.md) in the database.
+Update an existing [`pedal`](pg-resource-pedals.md) in the database.
 
-## URL
+## Endpoint
+
+To update an existing pedal in the databse, use the `PATCH /pedals/{id}` endpoint.
+
+## Request Example
 
 ```shell
-curl -X PATCH {base_url}/pedals/{pedal_ID}
+curl -X PATCH  http://localhost:3000/pedals/1 \
+ -H "Content-Type: application/json" \
+ -d '{
+   "family": "fuzz", 
+  "songIDs": [3]
+ }'
 ```
 
-## Parameters
+## Return Body Example
+
+```shell
+{
+  "id": 1,
+  "make": "Electro-Harmonix",
+  "model": "Big Muff",
+  "trim": "Ram's Head",
+  "family": "fuzz",
+  "songIDs": [3]
+}
+```
+
+## Resource Properties
 
 | Name | Type | Description |
 | ------------- | ----------- | ----------- |
@@ -23,44 +45,25 @@ curl -X PATCH {base_url}/pedals/{pedal_ID}
 | `family` | string | The family the pedal belongs to |
 | `songIDs` | number | The song IDs attached to this particular pedal resource |
 
-## Request Headers
+## Common Response Codes
 
-Content-Type: application/json
+| Status Code      | Category       | Description | Troubleshooting Tips |
+|------------------|----------------|-------------|----------------------|
+| 200 OK           | Success        | The request was successful. | Not Applicable |
+| 201 Created      | Success        | A resource was successfully created. | Not Applicable |
+| 204 No Content   | Success        | The request succeeded, but no content is returned. | Check the API documentation if content is expected. |
+| 400 Bad Request  | Error   | The server could not understand the request. | Check for malformed syntax, invalid input, or missing fields in the request. |
+| 404 Not Found    | Error   | The resource could not be found. | Confirm the URL is correct and the resource exists. |
+| 500 Internal Server Error | Error | A generic error occurred on the server. | Start the service and try again. |
+| ECONNREFUSED | Error | Service is offline. | Start the service and try again. |
 
-## Request Body Example
-
-```js
-{
-  "family:": "fuzz", 
-  "songIDs", [3]
-}
-```
-
-## Return Body Example
-
-```js
-{
-  "id": 1,
-  "make": "Electro-Harmonix",
-  "model": "Big Muff",
-  "trim": "Ram's Head",
-  "family": "fuzz",
-  "songIDs": [
-    3
-  ]
-}
-```
-
-## Return Status
-
-| Status value | Return status | Description |
-| ------------- | ----------- | ----------- |
-| 200 | Success | Requested data returned successfully |
-| 404 | Error | Specified task record not found |
-|  ECONNREFUSED | N/A | Service is offline. Start the service and try again. |
 
 ## Related Topics
 
-* [`Pedals`](pedals.md)
+* [`Pedals`](pg-resource-pedals.md)
 * [`Updating songs`](pg-reference-updating-songs.md)
 * [`Get pedal by ID`](pg-reference-get-pedal-by-id.md)
+
+## Need Help?
+
+We're here to help! For assistance, feel free to contact developer support at pedalgaragesupport@example.com.

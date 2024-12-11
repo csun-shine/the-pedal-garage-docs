@@ -2,17 +2,27 @@
 layout: page
 ---
 
-# API Reference
+# API Reference: Delete a Pedal
 
-Deleting [`pedals`](pedals.md) from the database.
+Delete a [`pedal`](pg-resource-pedals.md) from the database.
 
-## URL
+## Endpoint
+
+To delete a pedal from the database, use the `DELETE /pedals/{id}` endpoint.
+
+## Request Example
 
 ```shell
-curl -X DELETE {base_url}/pedals/{pedal_ID}
+curl -X DELETE http://localhost:3000/pedals/9
 ```
 
-## Parameters
+## Return Body Example
+
+```shell
+{}
+```
+
+## Resource Properties
 
 | Name | Type | Description |
 | ------------- | ----------- | ----------- |
@@ -23,30 +33,24 @@ curl -X DELETE {base_url}/pedals/{pedal_ID}
 | `family` | string | The family the pedal belongs to |
 | `songIDs` | number | The song IDs attached to this particular pedal resource |
 
-## Request Headers
+## Common Response Codes
 
-None
-
-## Request Body Example
-
-None
-
-## Return Body Example
-
-```js
-{}
-```
-
-## Return Status
-
-| Status value | Return status | Description |
-| ------------- | ----------- | ----------- |
-| 200 | Success | Requested data returned successfully |
-| 404 | Error | Specified task record not found |
-|  ECONNREFUSED | N/A | Service is offline. Start the service and try again. |
+| Status Code      | Category       | Description | Troubleshooting Tips |
+|------------------|----------------|-------------|----------------------|
+| 200 OK           | Success        | The request was successful. | Not Applicable |
+| 201 Created      | Success        | A resource was successfully created. | Not Applicable |
+| 204 No Content   | Success        | The request succeeded, but no content is returned. | Check the API documentation if content is expected. |
+| 400 Bad Request  | Error   | The server could not understand the request. | Check for malformed syntax, invalid input, or missing fields in the request. |
+| 404 Not Found    | Error   | The resource could not be found. | Confirm the URL is correct and the resource exists. |
+| 500 Internal Server Error | Error | A generic error occurred on the server. | Start the service and try again. |
+| ECONNREFUSED | Error | Service is offline. | Start the service and try again. |
 
 ## Related Topics
 
-* [`Pedals`](pedals.md)
+* [`Pedals`](pg-resource-pedals.md)
 * [`Deleting songs`](pg-reference-deleting-songs.md)
 * [`Get pedal by ID`](pg-reference-get-pedal-by-id.md)
+
+## Need Help?
+
+We're here to help! For assistance, feel free to contact developer support at pedalgaragesupport@example.com.

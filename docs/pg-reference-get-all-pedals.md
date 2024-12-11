@@ -2,17 +2,53 @@
 layout: page
 ---
 
-# API Reference
+# API Reference: Retrieve All Pedals
 
-Returns all [`pedals`](pedals.md) within the database.
+Retrieves all [`pedals`](pg-resource-pedals.md) within the database.
 
-## URL
+## Endpoint
+
+To retrieve all pedals in the databse, use the `GET /pedals` endpoint.
+
+## Request Example
 
 ```shell
-{base_url}/pedals
+curl -X GET http://localhost:3000/pedals
 ```
 
-## Parameters
+## Return Body Example
+
+```shell
+[
+  {
+    "id": 1, 
+    "make": "Electro-Harmonix",
+    "model": "Big Muff",
+    "trim": "Ram's Head",
+    "family": "fuzz",
+    "songIDs": [3]
+  },
+  {
+    "id": 2, 
+    "make": "Maestro",
+    "model": "PS-1A Phase Shifter",
+    "trim": "",
+    "family": "phaser", 
+    "songIDs": [3]
+  },
+  {
+    "id": 3, 
+    "make": "Dunlop",
+    "model": "Cry Baby",
+    "trim": "Classic",
+    "family": "wah", 
+    "songIDs": [3]
+  }, 
+    ...
+]
+```
+
+## Resource Properties
 
 | Name | Type | Description |
 | ------------- | ----------- | ----------- |
@@ -23,96 +59,24 @@ Returns all [`pedals`](pedals.md) within the database.
 | `family` | string | The family the pedal belongs to |
 | `songIDs` | number | The song IDs attached to this particular pedal resource |
 
-## Request Headers
+## Common Response Codes
 
-Content-Type: application/json
-
-## Request Body Example
-
-None
-
-## Return Body Example
-
-```js
-[
-      {
-        "id": 1, 
-        "make": "Electro-Harmonix",
-        "model": "Big Muff",
-        "trim": "Ram's Head",
-        "family": "fuzz",
-        "songIDs": [3]
-      },
-      {
-        "id": 2, 
-        "make": "Maestro",
-        "model": "PS-1A Phase Shifter",
-        "trim": "",
-        "family": "phaser", 
-        "songIDs": [3]
-      },
-      {
-        "id": 3, 
-        "make": "Dunlop",
-        "model": "Cry Baby",
-        "trim": "Classic",
-        "family": "wah", 
-        "songIDs": [3]
-      }, 
-      {
-        "id": 4, 
-        "make": "MXR",
-        "model": "Dyna Comp Compressor",
-        "trim": "",
-        "family": "compressor", 
-        "songIDs": []
-      }, 
-      {
-        "id": 5, 
-        "make": "Electro-Harmonix",
-        "model": "Memory Man",
-        "trim": "Deluxe",
-        "family": "delay", 
-        "songIDs": [2]
-      }, 
-      {
-        "id": 6, 
-        "make": "Boss",
-        "model": "CE-2W",
-        "trim": "Waza Craft",
-        "family": "Chorus", 
-        "songIDs": [1]
-      }, 
-      {
-        "id": 7, 
-        "make": "Boss",
-        "model": "DM-2W",
-        "trim": "Waza Craft",
-        "family": "Delay", 
-        "songIDs": [1]
-      }, 
-      {
-        "id": 8, 
-        "make": "Boss",
-        "model": "Super Overdrive SD-1",
-        "trim": "",
-        "family": "overdrive", 
-        "songIDs": [2]
-      }
-    ...
-]
-```
-
-## Return Status
-
-| Status value | Return status | Description |
-| ------------- | ----------- | ----------- |
-| 200 | Success | Requested data returned successfully |
-| 404 | Error | Specified task record not found |
-|  ECONNREFUSED | N/A | Service is offline. Start the service and try again. |
+| Status Code      | Category       | Description | Troubleshooting Tips |
+|------------------|----------------|-------------|----------------------|
+| 200 OK           | Success        | The request was successful. | Not Applicable |
+| 201 Created      | Success        | A resource was successfully created. | Not Applicable |
+| 204 No Content   | Success        | The request succeeded, but no content is returned. | Check the API documentation if content is expected. |
+| 400 Bad Request  | Error   | The server could not understand the request. | Check for malformed syntax, invalid input, or missing fields in the request. |
+| 404 Not Found    | Error   | The resource could not be found. | Confirm the URL is correct and the resource exists. |
+| 500 Internal Server Error | Error | A generic error occurred on the server. | Start the service and try again. |
+| ECONNREFUSED | Error | Service is offline. | Start the service and try again. |
 
 ## Related Topics
 
-* [`Pedals`](pedals.md)
+* [`Pedals`](pg-resource-pedals.md)
 * [`Get pedal by ID`](pg-reference-get-pedal-by-id.md)
 * [`Get song by ID`](pg-reference-get-song-by-id.md)
+
+## Need Help?
+
+We're here to help! For assistance, feel free to contact developer support at pedalgaragesupport@example.com.
