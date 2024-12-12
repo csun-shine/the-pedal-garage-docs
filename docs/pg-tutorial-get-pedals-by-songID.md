@@ -77,9 +77,7 @@ json-server --watch the-pedal-garage-db-source.json
     "model": "Big Muff",
     "trim": "Ram's Head",
     "family": "fuzz",
-    "songIDs": [
-      3
-    ]
+    "songIDs": [3]
   },
   {
     "id": 2,
@@ -87,9 +85,7 @@ json-server --watch the-pedal-garage-db-source.json
     "model": "PS-1A Phase Shifter",
     "trim": "",
     "family": "phaser",
-    "songIDs": [
-      3
-    ]
+    "songIDs": [3]
   },
   {
     "id": 3,
@@ -97,9 +93,7 @@ json-server --watch the-pedal-garage-db-source.json
     "model": "Cry Baby",
     "trim": "Classic",
     "family": "wah",
-    "songIDs": [
-      3
-    ]
+    "songIDs": [3]
   }
 ]
 ```
@@ -124,11 +118,11 @@ json-server --watch the-pedal-garage-db-source.json
 
 6. Under the "Key" column of the "Query Params" section, input `songIDs`.
 
-7. Under the "Value" column of the "Query Params" section, input the ID of whichever song you want to retrieve the pedals for. For example, put 3 if you want to retrieve the pedals for songID 3.
+7. Under the "Value" column of the "Query Params" section, input the ID of whichever song you want to retrieve the pedals for. For example, put `3` if you want to retrieve the pedals for `songID: 3`.
 
 8. Click "Send".
 
-9.  Response body should be populated with all pedals associated with songID 3 like below:
+9.  Response body should be populated with all pedals associated with `songID: 3` like below:
 
 ```shell
 [
@@ -138,9 +132,7 @@ json-server --watch the-pedal-garage-db-source.json
     "model": "Big Muff",
     "trim": "Ram's Head",
     "family": "fuzz",
-    "songIDs": [
-      3
-    ]
+    "songIDs": [3]
   },
   {
     "id": 2,
@@ -148,9 +140,7 @@ json-server --watch the-pedal-garage-db-source.json
     "model": "PS-1A Phase Shifter",
     "trim": "",
     "family": "phaser",
-    "songIDs": [
-      3
-    ]
+    "songIDs": [3]
   },
   {
     "id": 3,
@@ -158,16 +148,14 @@ json-server --watch the-pedal-garage-db-source.json
     "model": "Cry Baby",
     "trim": "Classic",
     "family": "wah",
-    "songIDs": [
-      3
-    ]
+    "songIDs": [3]
   }
 ]
 ```
 
-6. Adjust the value in the "Value" column and send the request to retrieve the songs for whichver pedal you want.
+10. Adjust the value in the "Value" column and send the request to retrieve the songs for whichver pedal you want.
 
-## Parameters
+## Resource Properties
 
 | Name | Type | Description |
 | ------------- | ----------- | ----------- |
@@ -178,13 +166,17 @@ json-server --watch the-pedal-garage-db-source.json
 | `family` | string | The family the pedal belongs to |
 | `songIDs` | number | The song IDs attached to this particular pedal resource |
 
-## Return Status
+## Common Response Codes
 
-| Status value | Return status | Description |
-| ------------- | ----------- | ----------- |
-| 200 | Success | Requested data returned successfully |
-| 404 | Error | Specified task record not found |
-|  ECONNREFUSED | N/A | Service is offline. Start the service and try again. |
+| Status Code      | Category       | Description | Troubleshooting Tips |
+|------------------|----------------|-------------|----------------------|
+| 200 OK           | Success        | The request was successful. | Not Applicable |
+| 201 Created      | Success        | A resource was successfully created. | Not Applicable |
+| 204 No Content   | Success        | The request succeeded, but no content is returned. | Check the API documentation if content is expected. |
+| 400 Bad Request  | Error   | The server could not understand the request. | Check for malformed syntax, invalid input, or missing fields in the request. |
+| 404 Not Found    | Error   | The resource could not be found. | Confirm the URL is correct and the resource exists. |
+| 500 Internal Server Error | Error | A generic error occurred on the server. | Start the service and try again. |
+| ECONNREFUSED | Error | Service is offline. | Start the service and try again. |
 
 ## Related Topics
 
