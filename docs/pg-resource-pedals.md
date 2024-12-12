@@ -13,7 +13,7 @@ The `pedals` resource represents the collection of pedals available in The Pedal
 * [Add a New Pedal](pg-reference-add-pedals.md): Add a new pedal to the database.
 * [Update an Existing Pedal](pg-reference-updating-pedals.md): Modify details of an exisiting pedal.
 * [Delete a Pedal](pg-reference-deleting-pedals.md): Remove a pedal from the database.
-* [Retrieve Pedal(s) by Resource Property Other Than PedalID](pg-reference-get-pedal-by-resource-property.md)
+* [Retrieve Pedal(s) by Resource Property Other Than PedalID](pg-reference-get-pedal-by-resource-property.md): Get detailed information about a specific pedal using properties other than PedalID.
 
 ## Resource Properties
 
