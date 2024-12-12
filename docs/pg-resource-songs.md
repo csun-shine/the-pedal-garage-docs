@@ -13,7 +13,7 @@ The `songs` resource represents the collection of songs available in The Pedal G
 * [Add a New Song](pg-reference-add-songs.md): Add a new song to the database.
 * [Update an Existing Song](pg-reference-updating-songs.md): Modify details of an exisiting song.
 * [Delete a Song](pg-reference-deleting-songs.md): Remove a song from the database.
-* [Retrieve Song(s) by Resource Property Other Than SongID](pg-reference-get-song-by-resource-property.md)
+* [Retrieve Song(s) by Resource Property Other Than SongID](pg-reference-get-song-by-resource-property.md): Get detailed information about a specific pedal using properties other than SongID.
 
 ## Resource Properties
 
