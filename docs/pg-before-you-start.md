@@ -11,15 +11,15 @@ You only have to do this one time per development system.
 In this tutorial you will learn how to:
 
 <!-- no toc -->
-    * [Step 1: Create a GitHub Account](#step-1-create-a-github-account)
-    * [Step 2: Download, Intall, and Configure Git on Your Computer](#step-2-download-intall-and-configure-git-on-your-computer)
-    * [Step 3: Download GitHub Desktop (optional)](#step-3-download-github-desktop-optional)
-    * [Step 4: Fork The Pedal Garage Repo](#step-4-fork-the-pedal-garage-repo)
-    * [Step 5: Authenticating with GitHub from Git](#step-5-authenticating-with-github-from-git)
-    * [Step 6: Install node.js and the json-server](#step-6-install-nodejs-and-the-json-server)
-    * [Step 7: Syncing Fork](#step-7-syncing-fork)
-    * [Step 8: Download Postman](#step-8-download-postman)
-    * [Step 9: Test Your Development System](#step-9-test-your-development-system)
+* [Step 1: Create a GitHub Account](#step-1-create-a-github-account)
+* [Step 2: Download, Intall, and Configure Git on Your Computer](#step-2-download-intall-and-configure-git-on-your-computer)
+* [Step 3: Download GitHub Desktop](#step-3-download-github-desktop)
+* [Step 4: Fork The Pedal Garage Repo](#step-4-fork-the-pedal-garage-repo)
+* [Step 5: Authenticating with GitHub from Git](#step-5-authenticating-with-github-from-git)
+* [Step 6: Install node.js and the json-server](#step-6-install-nodejs-and-the-json-server)
+* [Step 7: Syncing Fork](#step-7-syncing-fork)
+* [Step 8: Download Postman](#step-8-download-postman)
+* [Step 9: Test Your Development System](#step-9-test-your-development-system)
 
 Expect this tutorial to take about 20 minutes to complete.
 
@@ -109,62 +109,95 @@ Because *The Pedal Garage** is run on your development system with an `http://lo
 
 Test your development system by following the steps below: 
 
-1. Create and checkout a test branch of your fork of [The Pedal Garage Repo](https://github.com/csun-shine/the-pedal-garage-docs).
-Your `GitHub repo workspace` is the directory that contains your fork of [The Pedal Garage Repo](https://github.com/csun-shine/the-pedal-garage-docs).
+1. Open The Pedal Garage API in a Git Bash window and run the JSON server by entering the following command.
 
-        ```shell
-        cd <your GitHub repo workspace>
-        ls
-        # (see the-pedal-garage directory in the list)
-        cd the-pedal-garage-docs
-        git checkout -b tutorial-test
-        cd api
-        json-server -w to-do-db-source.json
-        ```
+```shell
+json-server --watch the-pedal-garage-db-source.json
+```
 
-    If your development system is installed correctly, you should see
-    the service start and display the URL of the service: `http://localhost:3000`.
+If your development system is installed correctly, the response should look like the following: 
 
-2. Make a test call to the service.
+```shell
+  \{^_^}/ hi!
 
-        ```shell
-        curl http://localhost:3000/pedals
-        ```
+  Loading pedal-garage-db-source.json
+  Done
+
+  Resources
+  http://localhost:3000/pedals
+  http://localhost:3000/songs
+
+  Home
+  http://localhost:3000
+
+  Type s + enter at any time to create a snapshot of the database
+  Watching...
+```
+
+2. Open the Pedal Garage API in another Git Bash window to make a test call to the service.
+
+```shell
+curl http://localhost:3000/pedals
+```
 
 3. If the service is running correctly, you should see a list of pedals as shown in the example below.
 
-        ```js
-        [
-            {
-              "id": 1, 
-              "make": "Electro-Harmonix",
-              "model": "Big Muff",
-              "trim": "Ram's Head",
-              "family": "fuzz",
-              "songIDs": [3]
-            },
-            {
-              "id": 2, 
-              "make": "Maestro",
-              "model": "PS-1A Phase Shifter",
-              "trim": "",
-              "family": "phaser", 
-              "songIDs": [3]
-            },
-            ...
-        ```
+```shell
+[
+  {
+    "id": 1, 
+    "make": "Electro-Harmonix",
+    "model": "Big Muff",
+    "trim": "Ram's Head",
+    "family": "fuzz",
+    "songIDs": [3]
+  },
+  {
+    "id": 2, 
+    "make": "Maestro",
+    "model": "PS-1A Phase Shifter",
+    "trim": "",
+    "family": "phaser", 
+    "songIDs": [3]
+  },
+  {
+    "id": 3, 
+    "make": "Dunlop",
+    "model": "Cry Baby",
+    "trim": "Classic",
+    "family": "wah", 
+    "songIDs": [3]
+  }, 
+    ...
+]
+```
 
-If you see the list of pedals from the service, you have successfully set up your development environment.
+If you see the list of pedals from the service, you have successfully set up your development environment!
 
 ## Troubleshooting
 
 If you don't see the list of pedals, or receive an error in any step of the procedure, investigate and correct the error before continuing.
+
+**Common Causes of Errors**
+
 Some common situations that cause errors include:
 
-1. You mistyped a command.
-2. You aren't in the correct directory.
-3. A required software component didn't install correctly.
-4. A required software component isn't up to date.
+* **Incorrect Command**: Double-check your commands for typos or errors.
+* **Wrong Directory**: Verify that you are in the correct directory in your command-line tool.
+* **Missing Software**: Ensure that all required software components are installed correctly, as outlined in the [Before You Start](pg-before-you-start.md) guide.
+* **Outdated Software**: Refer to the [Before You Start](pg-before-you-start.md) guide for instructions on updating your software to the latest version.
+
+**Common Response Codes**
+
+| Status Code      | Category       | Description | Troubleshooting Tips |
+|------------------|----------------|-------------|----------------------|
+| 200 OK           | Success        | The request was successful. | Not Applicable |
+| 201 Created      | Success        | A resource was successfully created. | Not Applicable |
+| 204 No Content   | Success        | The request succeeded, but no content is returned. | Check the API documentation if content is expected. |
+| 400 Bad Request  | Error   | The server could not understand the request. | Check for malformed syntax, invalid input, or missing fields in the request. |
+| 404 Not Found    | Error   | The resource could not be found. | Confirm the URL is correct and the resource exists. |
+| 500 Internal Server Error | Error | A generic error occurred on the server. | Start the service and try again. |
+| ECONNREFUSED | Error | Service is offline. | Start the service and try again. |
 
 ## Next Steps
 
@@ -172,3 +205,7 @@ Some common situations that cause errors include:
 
 * [Get Pedals by SongID](pg-tutorial-get-pedals-by-songID.md)
 * [Get Songs by PedalID](pg-tutorial-get-songs-by-pedalID.md)
+
+## Need Help?
+
+We’re here to help! Feel free to contact developer support at pedalgaragesupport@example.com.
