@@ -61,16 +61,25 @@ json-server --watch the-pedal-garage-db-source.json
 {base_url}/songs?pedalIDs={pedalID}
 ```
 
-4. For example, if we wanted to retrieve the songs associated with pedalID 3:
+4. For example, if we wanted to retrieve the songs associated with pedalID 1:
 
 ```shell
-{base_url}/songs?pedalIDs=3
+curl -X GET  {base_url}/songs?pedalIDs_like=1
 ```
 
 5. The response would look like:
 
 ```shell
-[input]
+[
+  {
+    "id": 3,
+    "name": "That Lady, Pts. 1 & 2",
+    "artist": "The Isley Brothers",
+    "year": "1964",
+    "label": "United Artists",
+    "pedalIDs": [1,2]
+  }
+]
 ```
 
 6. Run the curl command given in Step 3 to retrieve the songs for whichever pedal you want.
@@ -85,22 +94,31 @@ json-server --watch the-pedal-garage-db-source.json
 
 4. Select the "GET" method in the request box drop down menu.
 
-5. In the request box, input the following. If you do not have an environemnt set up with a `{base_url}`, type out the base URL directly into the request box.
+5. In the request box, input the following. If you do not have an environment set up with a `{base_url}`, type out the base URL directly into the request box.
 
 ```shell
-{{base_url}}/songs 
+{{base_url}}/songs
 ```
 
-6. Under the "Key" column of the "Query Params" section, input `pedalIDs`.
+6. Under the "Key" column of the "Query Params" section, input `pedalIDs_like`.
 
-7. Under the "Value" column of the "Query Params" section, input the ID of whichever pedal you want to retrieve the songs for. For example, put 3 if you want to retrieve the songs for pedalID 3.
+7. Under the "Value" column of the "Query Params" section, input the ID of whichever pedal you want to retrieve the songs for. For example, put `1` if you want to retrieve the songs for pedalID 1.
 
 8. Click "Send".
 
-9. Response body should be populated with all songs associated with pedalID 3 like below:
+9. Response body should be populated with all songs associated with pedalID 1 like below:
 
 ```shell
-[input]
+[
+  {
+    "id": 3,
+    "name": "That Lady, Pts. 1 & 2",
+    "artist": "The Isley Brothers",
+    "year": "1964",
+    "label": "United Artists",
+    "pedalIDs": [1,2]
+  }
+]
 ```
 
 ## Parameters
@@ -129,3 +147,7 @@ Congratulations! You've completed the "Get Pedals by SongID" tutorial. Explore o
 * [`Get Pedals by SongID`](tutorial-get-pedals-by-songID.md)
 * [`Songs`](pg-reference-songs.md)
 * [`Pedals`](pg-reference-pedals.md)
+
+## Need Help?
+
+We’re here to help! Feel free to contact developer support at pedalgaragesupport@example.com.
