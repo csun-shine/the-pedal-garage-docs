@@ -40,7 +40,7 @@ curl -X GET  http://localhost:3000/songs?artist=U2
 
 ## Partial Resource Property Value
 
-You an also retrieve song(s) using a partial match query. For example, searching by a keyword in the song name.
+You can also retrieve song(s) using a partial match query. For example, searching by a keyword in the song name.
 
 **Request Example**
 

@@ -8,7 +8,7 @@ One of the core features of this API is the ability to retrieve a list of songs 
 
 ## Before You Start
 
-Make sure you have completed the "Before you start" tuturial and set up your development system prior to proceeding with this tutorial. Having a basic understanding of how curl commands work and the Postman application functionality will be helpful.
+Make sure you have completed the "Before you start" tutorial and set up your development system prior to proceeding with this tutorial. Having a basic understanding of how curl commands work and the Postman application functionality will be helpful.
 
 ## Running JSON server
 
@@ -16,7 +16,7 @@ Make sure you have completed the "Before you start" tuturial and set up your dev
 
    1.1. *Method 1*: The first method is through the Git Hub desktop application. Make sure you are in the Pedal Garage repo, then click "Repository" in the navigation menu at the top. From the drop down menu, select "Open in Git Bash". This opens the main folder. Navigate to the api folder by running the `cd api` command.
 
-   1.2. *Method 2*: Alternativley you can open the repo in Git Bash through the locally saved folder. Open whichever folder the Pedal Garage API is saved in. Select and right click the "api" sub-folder and select the "Open in Git Bash" option. This method automatically opens the api folder within Git Bash.
+   1.2. *Method 2*: Alternatively, you can open the repo in Git Bash through the locally saved folder. Open whichever folder the Pedal Garage API is saved in. Select and right click the "api" sub-folder and select the "Open in Git Bash" option. This method automatically opens the api folder within Git Bash.
 
 2. In the Git Bash window you have opened, run the JSON server by entering the following command.
 
@@ -84,7 +84,7 @@ Make sure you have completed the "Before you start" tuturial and set up your dev
 
 2. Leave the JSON server running and open the Postman application.
 
-3. Either open a new request window or use whatever previous work environemtns and collections you have set up.
+3. Either open a new request window or use whatever previous work environments and collections you have set up.
 
 4. Select the "GET" method in the request box drop down menu.
 
@@ -115,7 +115,7 @@ Make sure you have completed the "Before you start" tuturial and set up your dev
    ]
    ```
 
-10. Adjust the value in the "Value" column and send the request to retrieve the pedals for whichver song you want.
+10. Adjust the value in the "Value" column and send the request to retrieve the pedals for whichever song you want.
 
 ## Resource Properties
 

@@ -12,7 +12,7 @@ In this tutorial you will learn how to:
 
 <!-- no toc -->
 * [Step 1: Create a GitHub Account](#step-1-create-a-github-account)
-* [Step 2: Download, Intall, and Configure Git on Your Computer](#step-2-download-intall-and-configure-git-on-your-computer)
+* [Step 2: Download, Install, and Configure Git on Your Computer](#step-2-download-install-and-configure-git-on-your-computer)
 * [Step 3: Download GitHub Desktop](#step-3-download-github-desktop)
 * [Step 4: Fork The Pedal Garage Repo](#step-4-fork-the-pedal-garage-repo)
 * [Step 5: Authenticating with GitHub from Git](#step-5-authenticating-with-github-from-git)
@@ -25,7 +25,7 @@ Expect this tutorial to take about 20 minutes to complete.
 
 ## Before You Begin
 
-To complete the tuotorial, you need a development system (PC, Mac, or Linux) running a current or
+To complete the tutorial, you need a development system (PC, Mac, or Linux) running a current or
 long-term support (LTS version of the operating system).
 
 ## Step 1: Create a GitHub Account
@@ -34,12 +34,12 @@ The first step to setting up your Git environment is to create a [GitHub](https:
 account. You can use an existing GitHub account if you already have one or create a new one by
 going to the GitHub website linked above.
 
-## Step 2: Download, Intall, and Configure Git on Your Computer
+## Step 2: Download, Install, and Configure Git on Your Computer
 
 The Pedal Garage requires using Git on the command line and so [Git](https://git-scm.com/downloads)
 needs to be downloaded, installed, and configured on your computer.
 
-Once Git is donwloaded to your computer, set your username in Git by following [this](https://docs.github.com/en/get-started/getting-started-with-git/setting-your-username-in-git)
+Once Git is downloaded to your computer, set your username in Git by following [this](https://docs.github.com/en/get-started/getting-started-with-git/setting-your-username-in-git)
 tutorial.
 
 Once your username is set, setup your commit email address in Git by following [this](https://docs.github.com/en/account-and-profile/setting-up-and-managing-your-personal-account-on-github/managing-email-preferences/setting-your-commit-email-address)
@@ -55,7 +55,7 @@ The following steps explain how to fork the To-Do Service repo.
 
 1. Sign in to your GitHub account.
 2. Navigate to [The Pedal Garage Repo](https://github.com/csun-shine/the-pedal-garage-docs).
-3. In the upper right hand corner of the page, click **Fork**.
+3. In the upper right-hand corner of the page, click **Fork**.
 4. Select the owner of the forked repo under the "Owner" dropdown menu.
 5. If you wish to rename the forked repo, type a name into the "Repository name" field.
 Otherwise, the forked repo will be named after its upstream repo by default.
@@ -75,9 +75,9 @@ Download and install the LTS version of **node.js** [here](https://nodejs.org/en
 Make sure you select the latest LTS version from the dropdown menu to download. Select the relevant OS. Accept all default options.
 Follow the steps below to test if your download was successful.
 
-1. Open a commmand line window.
+1. Open a command line window.
 2. Run the `node -v` command.
-3. If a version number is returned (e.g., v22.11.0), then node.js was sucessfully installed.
+3. If a version number is returned (e.g., v22.11.0), then node.js was successfully installed.
 
 Once **node.js** has been installed, follow the steps below to install the **json-server** package.
 
@@ -96,7 +96,7 @@ More information regarding the json-server can be found [here](https://www.npmjs
 Before beginning any work, make sure that your fork is in sync with the original repo. To do so, follow the steps below.
 
 1. Navigate to your forked repo on GitHub.
-2. In the upper right hand corner of the main dashboard, click **Sync fork**.
+2. In the upper right-hand corner of the main dashboard, click **Sync fork**.
 
 **TIP**: If you're using a fork of the repo, create a working branch in which to do your tutorials. Create a new branch for each tutorial to prevent a mistake in one from affecting your work in another.
 

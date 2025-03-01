@@ -8,7 +8,7 @@ Add a new [`pedal`](pg-resource-pedals.md) to the database.
 
 ## Endpoint
 
-To add a new pedal to the databse, use the `POST /pedals` endpoint.
+To add a new pedal to the database, use the `POST /pedals` endpoint.
 
 ## Request Example
 

@@ -8,7 +8,7 @@ Retrieve all [`songs`](pg-resource-songs.md) in the database.
 
 ## Endpoint
 
-To retrieve all songs in the databse, use the `GET /songs` endpoint.
+To retrieve all songs in the database, use the `GET /songs` endpoint.
 
 ## Request Example
 

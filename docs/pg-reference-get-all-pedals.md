@@ -8,7 +8,7 @@ Retrieves all [`pedals`](pg-resource-pedals.md) within the database.
 
 ## Endpoint
 
-To retrieve all pedals in the databse, use the `GET /pedals` endpoint.
+To retrieve all pedals in the database, use the `GET /pedals` endpoint.
 
 ## Request Example
 

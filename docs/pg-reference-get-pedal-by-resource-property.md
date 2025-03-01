@@ -48,7 +48,7 @@ curl -X GET  http://localhost:3000/pedals?make=Electro-Harmonix
 
 ## Partial Resource Property Value
 
-You an also retrieve pedal(s) using a partial match query. For example, searching by a keyword in the model name.
+You can also retrieve pedal(s) using a partial match query. For example, searching by a keyword in the model name.
 
 **Request Example**
 

@@ -8,7 +8,7 @@ Update a [`song`](pg-resource-songs.md) in the database.
 
 ## Endpoint
 
-To update an existing song in the databse, use the `PATCH /songs/{id}` endpoint.
+To update an existing song in the database, use the `PATCH /songs/{id}` endpoint.
 
 ## Request Body Example
 

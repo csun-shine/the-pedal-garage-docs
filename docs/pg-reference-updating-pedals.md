@@ -8,7 +8,7 @@ Update an existing [`pedal`](pg-resource-pedals.md) in the database.
 
 ## Endpoint
 
-To update an existing pedal in the databse, use the `PATCH /pedals/{id}` endpoint.
+To update an existing pedal in the database, use the `PATCH /pedals/{id}` endpoint.
 
 ## Request Example
 

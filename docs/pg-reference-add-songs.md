@@ -8,7 +8,7 @@ Add a new [`song`](pg-resource-songs.md) to the database.
 
 ## Endpoint
 
-To add a new song to the databse, use the `POST /songs` endpoint.
+To add a new song to the database, use the `POST /songs` endpoint.
 
 ## Request Example
 
