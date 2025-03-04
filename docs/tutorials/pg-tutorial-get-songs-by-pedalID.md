@@ -148,8 +148,8 @@ Make sure you have completed the "Before you start" tutorial and set up your dev
 Congratulations! You've completed the "Get Pedals by SongID" tutorial. Explore other tutorials and related references below:
 
 * [Get Pedals by SongID](pg-tutorial-get-pedals-by-songID.md)
-* [Songs](references/pg-resource-songs.md)
-* [Pedals](references/pg-resource-pedals.md)
+* [Songs](../references/pg-resource-songs.md)
+* [Pedals](../references/pg-resource-pedals.md)
 
 ## Need Help?
 
