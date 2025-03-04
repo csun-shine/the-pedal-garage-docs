@@ -1,5 +1,8 @@
 ---
-layout: page
+title: Get Pedals by SongID
+layout: default
+parent: Tutorials Home Page
+nav_order: 1
 ---
 
 # Tutorial: Get Pedals by SongID

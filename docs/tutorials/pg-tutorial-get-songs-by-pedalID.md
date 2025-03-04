@@ -1,5 +1,8 @@
 ---
-layout: page
+title: Get Songs by PedalID
+layout: default
+parent: Tutorials Home Page
+nav_order: 1
 ---
 
 # Tutorial: Get Songs by PedalID

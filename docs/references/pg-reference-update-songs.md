@@ -1,5 +1,8 @@
 ---
-layout: page
+title: Update Song
+layout: default
+parent: Songs Resource
+nav_order: 6
 ---
 
 # API Reference: Update an Existing Song

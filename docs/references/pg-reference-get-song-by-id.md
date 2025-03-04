@@ -1,5 +1,8 @@
 ---
-layout: page
+title: Get by SongID
+layout: default
+parent: Songs Resource
+nav_order: 4
 ---
 
 # API Reference: Retrieve Song by ID

@@ -1,8 +1,11 @@
 ---
-layout: page
+title: Add Pedal
+layout: default
+parent: Pedals Resource
+nav_order: 1
 ---
 
-# API Reference: Add A New Pedal
+# API Reference: Add a New Pedal
 
 Add a new [`pedal`](pg-resource-pedals.md) to the database.
 

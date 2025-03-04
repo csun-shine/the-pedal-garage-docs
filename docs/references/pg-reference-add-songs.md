@@ -1,5 +1,8 @@
 ---
-layout: page
+title: Add Song
+layout: default
+parent: Songs Resource
+nav_order: 1
 ---
 
 # API Reference: Add A New Song

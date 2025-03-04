@@ -1,5 +1,7 @@
 ---
-layout: page
+title: Before You Start
+layout: default
+nav_order: 2
 ---
 
 # Tutorial: Before You Start

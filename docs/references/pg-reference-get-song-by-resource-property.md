@@ -1,5 +1,8 @@
 ---
-layout: page
+title: Get by Non-SongID Resource Property
+layout: default
+parent: Songs Resource
+nav_order: 5
 ---
 
 # API Reference: Retrieve Song(s) by Resource Property Other Than SongID

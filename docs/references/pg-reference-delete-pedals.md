@@ -1,5 +1,8 @@
 ---
-layout: page
+title: Delete Pedal
+layout: default
+parent: Pedals Resource
+nav_order: 2
 ---
 
 # API Reference: Delete a Pedal

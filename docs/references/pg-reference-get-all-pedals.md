@@ -1,5 +1,8 @@
 ---
-layout: page
+title: Get all pedals
+layout: default
+parent: Pedals Resource
+nav_order: 3
 ---
 
 # API Reference: Retrieve All Pedals

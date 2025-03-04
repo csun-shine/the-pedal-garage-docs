@@ -1,8 +1,10 @@
 ---
-layout: page
+title: Quickstart Guide
+layout: default
+nav_order: 3
 ---
 
-# Quick Start Guide
+# Quickstart Guide
 
 Ready to dive in? This guide will walk you through the steps of making your first requests with The Pedal Garage API!
 

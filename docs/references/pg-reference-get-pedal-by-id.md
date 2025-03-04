@@ -1,5 +1,8 @@
 ---
-layout: page
+title: Get by PedalID
+layout: default
+parent: Pedals Resource
+nav_order: 4
 ---
 
 # API Reference: Retrieve Pedal by ID

@@ -1,5 +1,9 @@
 ---
-layout: page
+title: Pedals Resource
+layout: default
+parent: API Reference
+has_toc: false
+nav_order: 1
 ---
 
 # Pedals Resource

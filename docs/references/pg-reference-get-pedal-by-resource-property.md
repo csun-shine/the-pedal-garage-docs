@@ -1,5 +1,8 @@
 ---
-layout: page
+title: Get by Non-PedalID Resource Property
+layout: default
+parent: Pedals Resource
+nav_order: 5
 ---
 
 # API Reference: Retrieve Pedal(s) by Resource Property Other Than PedalID

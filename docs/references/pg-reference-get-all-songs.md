@@ -1,5 +1,8 @@
 ---
-layout: page
+title: Get All Songs
+layout: default
+parent: Songs Resource
+nav_order: 3
 ---
 
 # API Reference: Retrieve All Songs

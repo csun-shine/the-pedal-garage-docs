@@ -1,6 +1,9 @@
 ---
-layout: page
+title: Overview
+layout: home
+nav_order: 1
 ---
+
 # Discover the Gear Behind Legendary Songs with The Pedal Garage API
 
 The Pedal Garage API connects professional musicians, music gear enthusiasts, and casual music enjoyers alike with insight into the tools used to create iconic songs. With The Pedal Garage API, users can seamlessly discover the pedals used to craft the signature sounds of their favorite tracks - or explore which songs feature the pedals they already own. Whether you're a music gear retailer, educational platform, or music streaming service,

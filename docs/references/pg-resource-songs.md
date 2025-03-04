@@ -1,5 +1,9 @@
 ---
-layout: page
+title: Songs Resource
+layout: default
+parent: API Reference
+has_toc: false
+nav_order: 2
 ---
 
 # Songs Resource
