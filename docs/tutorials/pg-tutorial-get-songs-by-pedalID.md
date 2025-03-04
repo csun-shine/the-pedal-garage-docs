@@ -1,7 +1,7 @@
 ---
 title: Get Songs by PedalID
 layout: default
-parent: Tutorials Home Page
+parent: Tutorials
 nav_order: 1
 ---
 
