@@ -76,9 +76,9 @@ curl -X GET http://localhost:3000/pedals
 
 ## Related Topics
 
-* [`Pedals`](pg-resource-pedals.md)
-* [`Get pedal by ID`](pg-reference-get-pedal-by-id.md)
-* [`Get song by ID`](pg-reference-get-song-by-id.md)
+* [Pedals](pg-resource-pedals.md)
+* [Get pedal by ID](pg-reference-get-pedal-by-id.md)
+* [Get song by ID](pg-reference-get-song-by-id.md)
 
 ## Need Help?
 

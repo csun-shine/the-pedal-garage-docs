@@ -99,9 +99,9 @@ curl -X GET  http://localhost:3000/pedals?model_like=Man
 
 ## Related Topics
 
-* [`Pedals`](pg-resource-pedals.md)
-* [`Updating songs`](pg-reference-updating-songs.md)
-* [`Get pedal by ID`](pg-reference-get-pedal-by-id.md)
+* [Pedals](pg-resource-pedals.md)
+* [Update songs](pg-reference-update-songs.md)
+* [Get pedal by ID](pg-reference-get-pedal-by-id.md)
 
 ## Need Help?
 

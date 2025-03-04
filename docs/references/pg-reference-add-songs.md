@@ -75,9 +75,9 @@ curl -X POST http://localhost:3000/songs \
 
 ## Related Topics
 
-* [`Songs`](pg-resource-songs.md)
-* [`Add pedals`](pg-reference-add-pedals.md)
-* [`Get song by ID`](pg-reference-get-song-by-id.md)
+* [Songs](pg-resource-songs.md)
+* [Add pedals](pg-reference-add-pedals.md)
+* [Get song by ID](pg-reference-get-song-by-id.md)
 
 ## Need Help?
 

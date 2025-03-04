@@ -50,9 +50,9 @@ curl -X DELETE http://localhost:3000/pedals/9
 
 ## Related Topics
 
-* [`Pedals`](pg-resource-pedals.md)
-* [`Deleting songs`](pg-reference-deleting-songs.md)
-* [`Get pedal by ID`](pg-reference-get-pedal-by-id.md)
+* [Pedals](pg-resource-pedals.md)
+* [Delete songs](pg-reference-delete-songs.md)
+* [Get pedal by ID](pg-reference-get-pedal-by-id.md)
 
 ## Need Help?
 

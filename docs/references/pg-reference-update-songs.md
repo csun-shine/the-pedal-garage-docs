@@ -64,9 +64,9 @@ curl -X PATCH  http://localhost:3000/songs/1 \
 
 ## Related Topics
 
-* [`Songs`](pg-resource-songs.md)
-* [`Updating pedals`](pg-reference-updating-pedals.md)
-* [`Get pedal by ID`](pg-reference-get-pedal-by-id.md)
+* [Songs](pg-resource-songs.md)
+* [Update pedals](pg-reference-update-pedals.md)
+* [Get pedal by ID](pg-reference-get-pedal-by-id.md)
 
 ## Need Help?
 

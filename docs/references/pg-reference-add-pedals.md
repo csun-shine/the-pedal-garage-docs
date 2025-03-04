@@ -20,10 +20,10 @@ curl -X POST http://localhost:3000/pedals \
   -H "Content-Type: application/json" \
   -d '{
     "id": null,
-    "make": "MXR", 
-    "model": "M117R", 
-    "trim": "NA", 
-    "family": "flanger", 
+    "make": "MXR",
+    "model": "M117R",
+    "trim": "NA",
+    "family": "flanger",
     "songIDs": [4]
   }'
 ```
@@ -75,9 +75,9 @@ curl -X POST http://localhost:3000/pedals \
 
 ## Related Topics
 
-* [`Pedals`](pg-resource-pedals.md)
-* [`Add songs`](pg-reference-add-songs.md)
-* [`Get pedal by ID`](pg-reference-get-pedal-by-id.md)
+* [Pedals](pg-resource-pedals.md)
+* [Add songs](pg-reference-add-songs.md)
+* [Get pedal by ID](pg-reference-get-pedal-by-id.md)
 
 ## Need Help?
 

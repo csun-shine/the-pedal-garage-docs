@@ -43,7 +43,7 @@ Check out the links below for detailed tutorials. Make sure to follow the [Befor
 
 ## Reference
 
-Detailed reference documents for The Pedal Garage's resources: [API Reference](API-reference.md)
+Detailed reference documents for The Pedal Garage's resources: [API Reference](references/index.md)
 
 * [Pedal Resource](references/pg-resource-pedals.md)
 * [Song Resource](references/pg-resource-songs.md)
