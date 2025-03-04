@@ -5,7 +5,7 @@ parent: Pedals Resource
 nav_order: 1
 ---
 
-# API Reference: Add a New Pedal
+# API Reference: Add Pedal
 
 Add a new [`pedal`](pg-resource-pedals.md) to the database.
 

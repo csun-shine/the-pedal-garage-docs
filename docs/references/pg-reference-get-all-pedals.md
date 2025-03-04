@@ -1,11 +1,11 @@
 ---
-title: Get all pedals
+title: Get All Pedals
 layout: default
 parent: Pedals Resource
 nav_order: 3
 ---
 
-# API Reference: Retrieve All Pedals
+# API Reference: Get All Pedals
 
 Retrieves all [`pedals`](pg-resource-pedals.md) within the database.
 

@@ -5,7 +5,7 @@ parent: Songs Resource
 nav_order: 1
 ---
 
-# API Reference: Add A New Song
+# API Reference: Add Song
 
 Add a new [`song`](pg-resource-songs.md) to the database.
 

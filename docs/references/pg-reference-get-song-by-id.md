@@ -1,11 +1,11 @@
 ---
-title: Get by SongID
+title: Get Song by ID
 layout: default
 parent: Songs Resource
 nav_order: 4
 ---
 
-# API Reference: Retrieve Song by ID
+# API Reference: Get Song by ID
 
 Retrieve a [`song`](pg-resource-songs.md) array that contains only the song resource specified by the `id` parameter, if it exists.
 

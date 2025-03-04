@@ -1,11 +1,11 @@
 ---
-title: Get by Non-SongID Resource Property
+title: Get Song(s) by Non-SongID Resource Property
 layout: default
 parent: Songs Resource
 nav_order: 5
 ---
 
-# API Reference: Retrieve Song(s) by Resource Property Other Than SongID
+# API Reference: Get Song(s) by Non-SongID Resource Property
 
 Retrieve [`songs`](pg-resource-songs.md) in the database by resource properties other than song `id`.
 

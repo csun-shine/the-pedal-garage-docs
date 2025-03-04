@@ -5,7 +5,7 @@ parent: Pedals Resource
 nav_order: 6
 ---
 
-# API Reference: Update an Existing Pedal
+# API Reference: Update Pedal
 
 Update an existing [`pedal`](pg-resource-pedals.md) in the database.
 

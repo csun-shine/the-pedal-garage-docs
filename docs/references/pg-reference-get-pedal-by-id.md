@@ -1,11 +1,11 @@
 ---
-title: Get by PedalID
+title: Get Pedal by ID
 layout: default
 parent: Pedals Resource
 nav_order: 4
 ---
 
-# API Reference: Retrieve Pedal by ID
+# API Reference: Get Pedal by ID
 
 Retrieve a [`pedal`](pg-resource-pedals.md) array that contains only the pedal resource specified by the `id` parameter, if it exists.
 

@@ -5,7 +5,7 @@ parent: Songs Resource
 nav_order: 2
 ---
 
-# API Reference: Delete a Song
+# API Reference: Delete Song
 
 Delete a [`song`](pg-resource-songs.md) from the database.
 

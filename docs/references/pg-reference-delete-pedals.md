@@ -5,7 +5,7 @@ parent: Pedals Resource
 nav_order: 2
 ---
 
-# API Reference: Delete a Pedal
+# API Reference: Delete Pedal
 
 Delete a [`pedal`](pg-resource-pedals.md) from the database.
 

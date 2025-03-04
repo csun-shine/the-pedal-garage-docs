@@ -1,11 +1,11 @@
 ---
-title: Get by Non-PedalID Resource Property
+title: Get Pedal(s) by Non-PedalID Resource Property
 layout: default
 parent: Pedals Resource
 nav_order: 5
 ---
 
-# API Reference: Retrieve Pedal(s) by Resource Property Other Than PedalID
+# API Reference: Get Pedal(s) by Non-PedalID Resource Property
 
 Retrieve [`pedals`](pg-resource-pedals.md) in the database by resource properties other than pedal `id`.
 

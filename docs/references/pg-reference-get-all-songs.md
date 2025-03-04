@@ -5,7 +5,7 @@ parent: Songs Resource
 nav_order: 3
 ---
 
-# API Reference: Retrieve All Songs
+# API Reference: Get All Songs
 
 Retrieve all [`songs`](pg-resource-songs.md) in the database.
 

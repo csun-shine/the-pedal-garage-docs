@@ -5,7 +5,7 @@ parent: Songs Resource
 nav_order: 6
 ---
 
-# API Reference: Update an Existing Song
+# API Reference: Update Song
 
 Update a [`song`](pg-resource-songs.md) in the database.
 

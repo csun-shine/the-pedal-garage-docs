@@ -5,12 +5,12 @@ has_toc: false
 nav_order: 5
 ---
 
-## API Reference
+# API Reference
 
 API reference documents are organized by resource:
 
-* [Pedal Resource](pg-resource-pedals.md)
-* [Song Resource](pg-resource-songs.md)
+* [Pedals Resource](pg-resource-pedals.md)
+* [Songs Resource](pg-resource-songs.md)
 
 ### Note
 
