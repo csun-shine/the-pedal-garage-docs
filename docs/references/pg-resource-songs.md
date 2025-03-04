@@ -8,20 +8,20 @@ nav_order: 2
 
 # Songs Resource
 
-The `songs` resource represents the collection of songs available in The Pedal Garage API database. The Pedal Garage includes a pre-existing database of songs, which can be retrieved, added to, updated, or deleted through the API. This resource page provides an overview of the available endpoints for the `songs` resource, along with links to detailed reference pages for each operation. The resource page also includes explanations of resource properties and information on common response codes and error handling.
+The [`songs`](pg-resource-songs.md) resource represents the collection of songs available in The Pedal Garage API database. The Pedal Garage includes a pre-existing database of songs, which can be retrieved, added to, updated, or deleted through the API. This resource page provides an overview of the available endpoints for the [`songs`](pg-resource-songs.md) resource, along with links to detailed reference pages for each operation. The resource page also includes explanations of resource properties and information on common response codes and error handling.
 
 ## Resource Options
 
 * [Retrieve All Songs](pg-reference-get-all-songs.md): Fetch a complete list of songs in the database.
 * [Retrieve Songs by ID](pg-reference-get-song-by-id.md): Get detailed information about a specific song using its unique ID.
 * [Add a New Song](pg-reference-add-songs.md): Add a new song to the database.
-* [Update an Existing Song](pg-reference-updating-songs.md): Modify details of an existing song.
-* [Delete a Song](pg-reference-deleting-songs.md): Remove a song from the database.
+* [Update an Existing Song](pg-reference-update-songs.md): Modify details of an existing song.
+* [Delete a Song](pg-reference-delete-songs.md): Remove a song from the database.
 * [Retrieve Song(s) by Resource Property Other Than SongID](pg-reference-get-song-by-resource-property.md): Get detailed information about a specific pedal using properties other than SongID.
 
 ## Resource Properties
 
-Example `songs` resource
+Example [`songs`](pg-resource-songs.md) resource
 
 ```js
 

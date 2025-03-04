@@ -137,9 +137,9 @@ Some common situations that cause errors include:
 
  Congratulations on completing the Quick Start Guide! Here are links to tutorials for the API's key features and reference page to help you continue your Pedal Garage journey. Happy coding!
 
-* [Get Pedals by SongID](pg-tutorial-get-pedals-by-songID.md)
-* [Get Songs by PedalID](pg-tutorial-get-songs-by-pedalID.md)
-* [API Reference](API-reference.md)
+* [Get Pedals by SongID](tutorials/pg-tutorial-get-pedals-by-songID.md)
+* [Get Songs by PedalID](tutorials/pg-tutorial-get-songs-by-pedalID.md)
+* [API Reference](references/index.md)
 
 ## Need Help?
 

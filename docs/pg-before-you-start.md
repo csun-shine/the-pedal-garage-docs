@@ -205,8 +205,8 @@ Some common situations that cause errors include:
 
  Congratulations on setting up your development environment! Below are links to tutorials for some key features of the API:
 
-* [Get Pedals by SongID](pg-tutorial-get-pedals-by-songID.md)
-* [Get Songs by PedalID](pg-tutorial-get-songs-by-pedalID.md)
+* [Get Pedals by SongID](tutorials/pg-tutorial-get-pedals-by-songID.md)
+* [Get Songs by PedalID](tutorials/pg-tutorial-get-songs-by-pedalID.md)
 
 ## Need Help?
 
