@@ -1,6 +1,9 @@
 ---
-layout: page
+title: Overview
+layout: home
+nav_order: 1
 ---
+
 # Discover the Gear Behind Legendary Songs with The Pedal Garage API
 
 The Pedal Garage API connects professional musicians, music gear enthusiasts, and casual music enjoyers alike with insight into the tools used to create iconic songs. With The Pedal Garage API, users can seamlessly discover the pedals used to craft the signature sounds of their favorite tracks - or explore which songs feature the pedals they already own. Whether you're a music gear retailer, educational platform, or music streaming service,
@@ -8,8 +11,8 @@ The Pedal Garage API can help to transform your platform into a powerful resourc
 
 ## What Can The Pedal Garage API Do?
 
-* **[Get Pedals by SongID](pg-tutorial-get-pedals-by-songID.md)**: This feature allows users to discover the exact pedals used in their favorite tracks. From legendary songs to modern hits.
-* **[Get Songs by PedalID](pg-tutorial-get-songs-by-pedalID.md)**: This feature allows users to discover the songs powered by specific pedals.
+* **[Get Pedals by SongID](tutorials/pg-tutorial-get-pedals-by-songID.md)**: This feature allows users to discover the exact pedals used in their favorite tracks. From legendary songs to modern hits.
+* **[Get Songs by PedalID](tutorials/pg-tutorial-get-songs-by-pedalID.md)**: This feature allows users to discover the songs powered by specific pedals.
 
 The Pedal Garage's comprehensive metadata reveals the gear behind the music - helping cover band hobbyists perfect their sound, assisting gear enthusiasts with building their collection, and providing learning opportunities for musicians.
 
@@ -35,16 +38,12 @@ Ready to get started? Check out the [Quickstart Guide](pg-quick-start-guide.md) 
 
 Check out the links below for detailed tutorials. Make sure to follow the [Before You Start](pg-before-you-start.md) guide first to set up your development system for these tutorials.
 
-* Learn how to retrieve pedals by songID: [Get Pedals by SongID](pg-tutorial-get-pedals-by-songID.md)
-* Learn how to retrieve songs by pedalID: [Get Songs by PedalID](pg-tutorial-get-songs-by-pedalID.md)
+* Learn how to retrieve pedals by songID: [Get Pedals by SongID](tutorials/pg-tutorial-get-pedals-by-songID.md)
+* Learn how to retrieve songs by pedalID: [Get Songs by PedalID](tutorials/pg-tutorial-get-songs-by-pedalID.md)
 
 ## Reference
 
-Detailed reference documents for The Pedal Garage's resources: [API Reference](API-reference.md)
+Detailed reference documents for The Pedal Garage's resources: [API Reference](references/index.md)
 
-* [Pedal Resource](pg-resource-pedals.md)
-* [Song Resource](pg-resource-songs.md)
-
-## Support
-
-We're here to help! Feel free to contact developer support at pedalgaragesupport@example.com.
+* [Pedal Resource](references/pg-resource-pedals.md)
+* [Song Resource](references/pg-resource-songs.md)

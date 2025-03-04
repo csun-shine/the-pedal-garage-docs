@@ -1,25 +1,53 @@
 ---
-layout: page
+title: Add Song
+layout: default
+parent: Songs Resource
+nav_order: 1
 ---
 
-# API Reference: Delete a Song
+# API Reference: Add Song
 
-Delete a [`song`](pg-resource-songs.md) from the database.
+Add a new [`song`](pg-resource-songs.md) to the database.
 
 ## Endpoint
 
-To delete a song from the database, use the `DELETE /songs/{id}` endpoint.
+To add a new song to the database, use the `POST /songs` endpoint.
 
 ## Request Example
 
 ```shell
-curl -X DELETE http://localhost:3000/songs/4
+curl -X POST http://localhost:3000/songs \
+  -H "Content-Type: application/json" \
+  -d '{
+    "id": null,
+    "name": "Barracuda",
+    "artist": "Heart",
+    "year": "1997",
+    "label": "Portrait",
+    "pedalIDs": [8,9]
+  }'
 ```
+
+*Notes*:
+
+* To ensure the `id` field is placed at the beginning of the object and matches existing database entries, include it in your request. Otherwise, the `id` field will automatically be populated at the end of the object.
+* Setting the `id` to null will trigger the system to generate a new, chronologically sequential identifier for the object.
+* Nonapplicable fields may be left blank, or placeholder text such as "NA" may be used.
+
 
 ## Return Body Example
 
 ```shell
-{}
+[
+ {
+  "id": 4,
+  "name": "Barracuda",
+  "artist": "Heart",
+  "year": "1997",
+  "label": "Portrait",
+  "pedalIDs": [8,9],
+ }
+]
 ```
 
 ## Resource Properties
@@ -47,10 +75,6 @@ curl -X DELETE http://localhost:3000/songs/4
 
 ## Related Topics
 
-* [`Songs`](pg-resource-songs.md)
-* [`Deleting pedals`](pg-reference-deleting-pedals.md)
-* [`Get song by ID`](pg-reference-get-song-by-id.md)
-
-## Need Help?
-
-We're here to help! For assistance, feel free to contact developer support at pedalgaragesupport@example.com.
+* [Songs](pg-resource-songs.md)
+* [Add pedals](pg-reference-add-pedals.md)
+* [Get song by ID](pg-reference-get-song-by-id.md)

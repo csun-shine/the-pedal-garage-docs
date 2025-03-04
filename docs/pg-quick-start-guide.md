@@ -1,8 +1,10 @@
 ---
-layout: page
+title: Quickstart Guide
+layout: default
+nav_order: 3
 ---
 
-# Quick Start Guide
+# Quickstart Guide
 
 Ready to dive in? This guide will walk you through the steps of making your first requests with The Pedal Garage API!
 
@@ -135,10 +137,6 @@ Some common situations that cause errors include:
 
  Congratulations on completing the Quick Start Guide! Here are links to tutorials for the API's key features and reference page to help you continue your Pedal Garage journey. Happy coding!
 
-* [Get Pedals by SongID](pg-tutorial-get-pedals-by-songID.md)
-* [Get Songs by PedalID](pg-tutorial-get-songs-by-pedalID.md)
-* [API Reference](API-reference.md)
-
-## Need Help?
-
-We’re here to help! Feel free to contact developer support at pedalgaragesupport@example.com.
+* [Get Pedals by SongID](tutorials/pg-tutorial-get-pedals-by-songID.md)
+* [Get Songs by PedalID](tutorials/pg-tutorial-get-songs-by-pedalID.md)
+* [API Reference](references/index.md)

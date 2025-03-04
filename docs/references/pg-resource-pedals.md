@@ -1,23 +1,27 @@
 ---
-layout: page
+title: Pedals Resource
+layout: default
+parent: API Reference
+has_toc: false
+nav_order: 1
 ---
 
 # Pedals Resource
 
-The `pedals` resource represents the collection of pedals available in The Pedal Garage API database. The Pedal Garage includes a pre-existing database of pedals, which can be retrieved, added to, updated, or deleted through the API. This resource page provides an overview of the available endpoints for the `pedals` resource, along with links to detailed reference pages for each operation. The resource page also includes explanations of resource properties and information on common response codes and error handling.
+The [`pedals`](pg-resource-pedals.md) resource represents the collection of pedals available in The Pedal Garage API database. The Pedal Garage includes a pre-existing database of pedals, which can be retrieved, added to, updated, or deleted through the API. This resource page provides an overview of the available endpoints for the [`pedals`](pg-resource-pedals.md) resource, along with links to detailed reference pages for each operation. The resource page also includes explanations of resource properties and information on common response codes and error handling.
 
-## Available Endpoints
+## Resource Options
 
-* [Retrieve All Pedals](pg-reference-get-all-pedals.md): Fetch a complete list of all pedals in the databse.
+* [Retrieve All Pedals](pg-reference-get-all-pedals.md): Fetch a complete list of all pedals in the database.
 * [Retrieve Pedals by ID](pg-reference-get-pedal-by-id.md): Get detailed information about a specific pedal using its unique ID.
 * [Add a New Pedal](pg-reference-add-pedals.md): Add a new pedal to the database.
-* [Update an Existing Pedal](pg-reference-updating-pedals.md): Modify details of an exisiting pedal.
-* [Delete a Pedal](pg-reference-deleting-pedals.md): Remove a pedal from the database.
+* [Update an Existing Pedal](pg-reference-update-pedals.md): Modify details of an existing pedal.
+* [Delete a Pedal](pg-reference-delete-pedals.md): Remove a pedal from the database.
 * [Retrieve Pedal(s) by Resource Property Other Than PedalID](pg-reference-get-pedal-by-resource-property.md): Get detailed information about a specific pedal using properties other than PedalID.
 
 ## Resource Properties
 
-Example `pedals` resource
+Example [`pedals`](pg-resource-pedals.md) resource
 
 ```js
 

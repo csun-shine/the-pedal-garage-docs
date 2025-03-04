@@ -1,37 +1,28 @@
 ---
-layout: page
+title: Delete Pedal
+layout: default
+parent: Pedals Resource
+nav_order: 2
 ---
 
-# API Reference: Update an Existing Pedal
+# API Reference: Delete Pedal
 
-Update an existing [`pedal`](pg-resource-pedals.md) in the database.
+Delete a [`pedal`](pg-resource-pedals.md) from the database.
 
 ## Endpoint
 
-To update an existing pedal in the databse, use the `PATCH /pedals/{id}` endpoint.
+To delete a pedal from the database, use the `DELETE /pedals/{id}` endpoint.
 
 ## Request Example
 
 ```shell
-curl -X PATCH  http://localhost:3000/pedals/1 \
- -H "Content-Type: application/json" \
- -d '{
-   "family": "fuzz", 
-  "songIDs": [3]
- }'
+curl -X DELETE http://localhost:3000/pedals/9
 ```
 
 ## Return Body Example
 
 ```shell
-{
-  "id": 1,
-  "make": "Electro-Harmonix",
-  "model": "Big Muff",
-  "trim": "Ram's Head",
-  "family": "fuzz",
-  "songIDs": [3]
-}
+{}
 ```
 
 ## Resource Properties
@@ -57,13 +48,8 @@ curl -X PATCH  http://localhost:3000/pedals/1 \
 | 500 Internal Server Error | Error | A generic error occurred on the server. | Start the service and try again. |
 | ECONNREFUSED | Error | Service is offline. | Start the service and try again. |
 
-
 ## Related Topics
 
-* [`Pedals`](pg-resource-pedals.md)
-* [`Updating songs`](pg-reference-updating-songs.md)
-* [`Get pedal by ID`](pg-reference-get-pedal-by-id.md)
-
-## Need Help?
-
-We're here to help! For assistance, feel free to contact developer support at pedalgaragesupport@example.com.
+* [Pedals](pg-resource-pedals.md)
+* [Delete songs](pg-reference-delete-songs.md)
+* [Get pedal by ID](pg-reference-get-pedal-by-id.md)

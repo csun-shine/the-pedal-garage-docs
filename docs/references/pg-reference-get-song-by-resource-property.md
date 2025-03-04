@@ -1,8 +1,11 @@
 ---
-layout: page
+title: Get Song(s) by Non-SongID Resource Property
+layout: default
+parent: Songs Resource
+nav_order: 5
 ---
 
-# API Reference: Retrieve Song(s) by Resource Property Other Than SongID
+# API Reference: Get Song(s) by Non-SongID Resource Property
 
 Retrieve [`songs`](pg-resource-songs.md) in the database by resource properties other than song `id`.
 
@@ -40,7 +43,7 @@ curl -X GET  http://localhost:3000/songs?artist=U2
 
 ## Partial Resource Property Value
 
-You an also retrieve song(s) using a partial match query. For example, searching by a keyword in the song name.
+You can also retrieve song(s) using a partial match query. For example, searching by a keyword in the song name.
 
 **Request Example**
 
@@ -113,10 +116,6 @@ curl -X GET  http://localhost:3000/songs?pedalIDs_like=1
 
 ## Related Topics
 
-* [`Songs`](pg-resource-songs.md)
-* [`Updating pedals`](pg-reference-updating-pedals.md)
-* [`Get pedal by ID`](pg-reference-get-pedal-by-id.md)
-
-## Need Help?
-
-We're here to help! For assistance, feel free to contact developer support at pedalgaragesupport@example.com.
+* [Songs](pg-resource-songs.md)
+* [Update pedals](pg-reference-update-pedals.md)
+* [Get pedal by ID](pg-reference-get-pedal-by-id.md)

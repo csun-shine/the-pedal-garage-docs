@@ -1,8 +1,11 @@
 ---
-layout: page
+title: Get Song by ID
+layout: default
+parent: Songs Resource
+nav_order: 4
 ---
 
-# API Reference: Retrieve Song by ID
+# API Reference: Get Song by ID
 
 Retrieve a [`song`](pg-resource-songs.md) array that contains only the song resource specified by the `id` parameter, if it exists.
 
@@ -56,10 +59,6 @@ curl -X GET http://localhost:3000/songs/1
 
 ## Related Topics
 
-* [`Songs`](pg-resource-songs.md)
-* [`Get all songs`](pg-reference-get-all-songs.md)
-* [`Get pedal by ID`](pg-reference-get-pedal-by-id.md)
-
-## Need Help?
-
-We're here to help! For assistance, feel free to contact developer support at pedalgaragesupport@example.com.
+* [Songs](pg-resource-songs.md)
+* [Get all songs](pg-reference-get-all-songs.md)
+* [Get pedal by ID](pg-reference-get-pedal-by-id.md)

@@ -1,33 +1,41 @@
 ---
-layout: page
+title: Update Song
+layout: default
+parent: Songs Resource
+nav_order: 6
 ---
 
-# API Reference: Retrieve Pedal by ID
+# API Reference: Update Song
 
-Retrieve a [`pedal`](pg-resource-pedals.md) array that contains only the pedal resource specified by the `id` parameter, if it exists.
+Update a [`song`](pg-resource-songs.md) in the database.
 
 ## Endpoint
 
-To retrieve details about a specific pedal, use the `GET /pedals/{id}` endpoint.
+To update an existing song in the database, use the `PATCH /songs/{id}` endpoint.
 
-## Request Example
+## Request Body Example
 
 ```shell
-curl -X GET http://localhost:3000/pedals/1
+curl -X PATCH  http://localhost:3000/songs/1 \
+ -H "Content-Type: application/json" \
+ -d '{
+   "year": "1987", 
+   "pedalIDs": [6,7]
+ }'
 ```
 
 ## Return Body Example
 
 ```shell
 [
-  {
-    "id": 1, 
-    "make": "Electro-Harmonix",
-    "model": "Big Muff",
-    "trim": "Ram's Head",
-    "family": "fuzz",
-    "songIDs": [3]
-  }
+ {
+  "id": 1,
+  "name": "Just Like Heaven",
+  "artist": "The Cure",
+  "year": "1987",
+  "label": "Fiction",
+  "pedalIDs": [6,7]
+ }
 ]
 ```
 
@@ -35,12 +43,12 @@ curl -X GET http://localhost:3000/pedals/1
 
 | Name | Type | Description |
 | ------------- | ----------- | ----------- |
-| `id` | number | The ID of the pedal resource to which songs are attached |
-| `make` | string | The make of the pedal |
-| `model` | string | The model of the pedal |
-| `trim` | string | The trim of the pedal, if applicable |
-| `family` | string | The family the pedal belongs to |
-| `songIDs` | number | The song IDs attached to this particular pedal resource |
+| `id` | number | The ID of the song resource to which pedals are attached |
+| `name` | string | The name of the song |
+| `artist` | string | The name of the artist |
+| `year` | number | The year the song was released |
+| `label` | string | The label that published the song |
+| `pedalIDs` | number | The pedal IDs attached to this particular song resource |
 
 ## Common Response Codes
 
@@ -56,10 +64,6 @@ curl -X GET http://localhost:3000/pedals/1
 
 ## Related Topics
 
-* [`Pedals`](pg-resource-pedals.md)
-* [`Get all pedals`](pg-reference-get-all-pedals.md)
-* [`Get songs by ID`](pg-reference-get-song-by-id.md)
-
-## Need Help?
-
-We're here to help! For assistance, feel free to contact developer support at pedalgaragesupport@example.com.
+* [Songs](pg-resource-songs.md)
+* [Update pedals](pg-reference-update-pedals.md)
+* [Get pedal by ID](pg-reference-get-pedal-by-id.md)

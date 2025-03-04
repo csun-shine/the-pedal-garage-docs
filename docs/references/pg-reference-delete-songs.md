@@ -1,51 +1,28 @@
 ---
-layout: page
+title: Delete Song
+layout: default
+parent: Songs Resource
+nav_order: 2
 ---
 
-# API Reference: Retrieve All Songs
+# API Reference: Delete Song
 
-Retrieve all [`songs`](pg-resource-songs.md) in the database.
+Delete a [`song`](pg-resource-songs.md) from the database.
 
 ## Endpoint
 
-To retrieve all songs in the databse, use the `GET /songs` endpoint.
+To delete a song from the database, use the `DELETE /songs/{id}` endpoint.
 
 ## Request Example
 
 ```shell
-curl -X GET http://localhost:3000/songs
+curl -X DELETE http://localhost:3000/songs/4
 ```
 
 ## Return Body Example
 
 ```shell
-[
-      {
-        "id": 1, 
-        "name": "Just Like Heaven",
-        "artist": "The Cure",
-        "year": 1987,
-        "label": "Fiction", 
-        "pedalIDs": [6,7]
-      },
-      {
-        "id": 2, 
-        "name": "New Year's Day",
-        "artist": "U2",
-        "year": 1983,
-        "label": "Island", 
-        "pedalIDs": [5,8]
-      },
-      {
-        "id": 3, 
-        "name": "That Lady, Pts. 1 & 2",
-        "artist": "The Isley Brothers",
-        "year": "1964",
-        "label": "United Artists", 
-        "pedalIDs": [1,2]
-      } 
-    ...
-]
+{}
 ```
 
 ## Resource Properties
@@ -73,10 +50,6 @@ curl -X GET http://localhost:3000/songs
 
 ## Related Topics
 
-* [`Songs`](pg-resource-songs.md)
-* [`Get song by ID`](pg-reference-get-song-by-id.md)
-* [`Get pedal by ID`](pg-reference-get-pedal-by-id.md)
-
-## Need Help?
-
-We're here to help! For assistance, feel free to contact developer support at pedalgaragesupport@example.com.
+* [Songs](pg-resource-songs.md)
+* [Delete pedals](pg-reference-delete-pedals.md)
+* [Get song by ID](pg-reference-get-song-by-id.md)

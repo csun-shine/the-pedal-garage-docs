@@ -1,25 +1,37 @@
 ---
-layout: page
+title: Get Pedal by ID
+layout: default
+parent: Pedals Resource
+nav_order: 4
 ---
 
-# API Reference: Delete a Pedal
+# API Reference: Get Pedal by ID
 
-Delete a [`pedal`](pg-resource-pedals.md) from the database.
+Retrieve a [`pedal`](pg-resource-pedals.md) array that contains only the pedal resource specified by the `id` parameter, if it exists.
 
 ## Endpoint
 
-To delete a pedal from the database, use the `DELETE /pedals/{id}` endpoint.
+To retrieve details about a specific pedal, use the `GET /pedals/{id}` endpoint.
 
 ## Request Example
 
 ```shell
-curl -X DELETE http://localhost:3000/pedals/9
+curl -X GET http://localhost:3000/pedals/1
 ```
 
 ## Return Body Example
 
 ```shell
-{}
+[
+  {
+    "id": 1, 
+    "make": "Electro-Harmonix",
+    "model": "Big Muff",
+    "trim": "Ram's Head",
+    "family": "fuzz",
+    "songIDs": [3]
+  }
+]
 ```
 
 ## Resource Properties
@@ -47,10 +59,6 @@ curl -X DELETE http://localhost:3000/pedals/9
 
 ## Related Topics
 
-* [`Pedals`](pg-resource-pedals.md)
-* [`Deleting songs`](pg-reference-deleting-songs.md)
-* [`Get pedal by ID`](pg-reference-get-pedal-by-id.md)
-
-## Need Help?
-
-We're here to help! For assistance, feel free to contact developer support at pedalgaragesupport@example.com.
+* [Pedals](pg-resource-pedals.md)
+* [Get all pedals](pg-reference-get-all-pedals.md)
+* [Get songs by ID](pg-reference-get-song-by-id.md)

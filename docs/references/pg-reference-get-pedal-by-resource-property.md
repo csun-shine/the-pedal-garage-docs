@@ -1,8 +1,11 @@
 ---
-layout: page
+title: Get Pedal(s) by Non-PedalID Resource Property
+layout: default
+parent: Pedals Resource
+nav_order: 5
 ---
 
-# API Reference: Retrieve Pedal(s) by Resource Property Other Than PedalID
+# API Reference: Get Pedal(s) by Non-PedalID Resource Property
 
 Retrieve [`pedals`](pg-resource-pedals.md) in the database by resource properties other than pedal `id`.
 
@@ -48,7 +51,7 @@ curl -X GET  http://localhost:3000/pedals?make=Electro-Harmonix
 
 ## Partial Resource Property Value
 
-You an also retrieve pedal(s) using a partial match query. For example, searching by a keyword in the model name.
+You can also retrieve pedal(s) using a partial match query. For example, searching by a keyword in the model name.
 
 **Request Example**
 
@@ -96,10 +99,6 @@ curl -X GET  http://localhost:3000/pedals?model_like=Man
 
 ## Related Topics
 
-* [`Pedals`](pg-resource-pedals.md)
-* [`Updating songs`](pg-reference-updating-songs.md)
-* [`Get pedal by ID`](pg-reference-get-pedal-by-id.md)
-
-## Need Help?
-
-We're here to help! For assistance, feel free to contact developer support at pedalgaragesupport@example.com.
+* [Pedals](pg-resource-pedals.md)
+* [Update songs](pg-reference-update-songs.md)
+* [Get pedal by ID](pg-reference-get-pedal-by-id.md)

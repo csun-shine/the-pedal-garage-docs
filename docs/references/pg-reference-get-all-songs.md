@@ -1,49 +1,53 @@
 ---
-layout: page
+title: Get All Songs
+layout: default
+parent: Songs Resource
+nav_order: 3
 ---
 
-# API Reference: Add A New Song
+# API Reference: Get All Songs
 
-Add a new [`song`](pg-resource-songs.md) to the database.
+Retrieve all [`songs`](pg-resource-songs.md) in the database.
 
 ## Endpoint
 
-To add a new song to the databse, use the `POST /songs` endpoint.
+To retrieve all songs in the database, use the `GET /songs` endpoint.
 
 ## Request Example
 
 ```shell
-curl -X POST http://localhost:3000/songs \
-  -H "Content-Type: application/json" \
-  -d '{
-    "id": null,
-    "name": "Barracuda",
-    "artist": "Heart",
-    "year": "1997",
-    "label": "Portrait",
-    "pedalIDs": [8,9]
-  }'
+curl -X GET http://localhost:3000/songs
 ```
-
-*Notes*:
-
-* To ensure the `id` field is placed at the beginning of the object and matches existing database entries, include it in your request. Otherwise, the `id` field will automatically be populated at the end of the object.
-* Setting the `id` to null will trigger the system to generate a new, chronologically sequential identifier for the object.
-* Nonapplicable fields may be left blank, or placeholder text such as "NA" may be used.
-
 
 ## Return Body Example
 
 ```shell
 [
- {
-  "id": 4,
-  "name": "Barracuda",
-  "artist": "Heart",
-  "year": "1997",
-  "label": "Portrait",
-  "pedalIDs": [8,9],
- }
+      {
+        "id": 1, 
+        "name": "Just Like Heaven",
+        "artist": "The Cure",
+        "year": 1987,
+        "label": "Fiction", 
+        "pedalIDs": [6,7]
+      },
+      {
+        "id": 2, 
+        "name": "New Year's Day",
+        "artist": "U2",
+        "year": 1983,
+        "label": "Island", 
+        "pedalIDs": [5,8]
+      },
+      {
+        "id": 3, 
+        "name": "That Lady, Pts. 1 & 2",
+        "artist": "The Isley Brothers",
+        "year": "1964",
+        "label": "United Artists", 
+        "pedalIDs": [1,2]
+      } 
+    ...
 ]
 ```
 
@@ -72,10 +76,6 @@ curl -X POST http://localhost:3000/songs \
 
 ## Related Topics
 
-* [`Songs`](pg-resource-songs.md)
-* [`Add pedals`](pg-reference-add-pedals.md)
-* [`Get song by ID`](pg-reference-get-song-by-id.md)
-
-## Need Help?
-
-We're here to help! For assistance, feel free to contact developer support at pedalgaragesupport@example.com.
+* [Songs](pg-resource-songs.md)
+* [Get song by ID](pg-reference-get-song-by-id.md)
+* [Get pedal by ID](pg-reference-get-pedal-by-id.md)

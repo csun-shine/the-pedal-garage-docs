@@ -1,50 +1,52 @@
 ---
-layout: page
+title: Add Pedal
+layout: default
+parent: Pedals Resource
+nav_order: 1
 ---
 
-# API Reference: Retrieve All Pedals
+# API Reference: Add Pedal
 
-Retrieves all [`pedals`](pg-resource-pedals.md) within the database.
+Add a new [`pedal`](pg-resource-pedals.md) to the database.
 
 ## Endpoint
 
-To retrieve all pedals in the databse, use the `GET /pedals` endpoint.
+To add a new pedal to the database, use the `POST /pedals` endpoint.
 
 ## Request Example
 
 ```shell
-curl -X GET http://localhost:3000/pedals
+curl -X POST http://localhost:3000/pedals \
+  -H "Content-Type: application/json" \
+  -d '{
+    "id": null,
+    "make": "MXR",
+    "model": "M117R",
+    "trim": "NA",
+    "family": "flanger",
+    "songIDs": [4]
+  }'
 ```
+
+*Notes*:
+
+* To ensure the `id` field is placed at the beginning of the object and matches existing database entries, include it in your request. Otherwise, the `id` field will automatically be populated at the end of the object. 
+* Setting the `id` to null will trigger the system to generate a new, chronologically sequential identifier for the object.
+* Nonapplicable fields may be left blank, or placeholder text such as "NA" may be used.
+
 
 ## Return Body Example
 
 ```shell
 [
   {
-    "id": 1, 
-    "make": "Electro-Harmonix",
-    "model": "Big Muff",
-    "trim": "Ram's Head",
-    "family": "fuzz",
-    "songIDs": [3]
-  },
-  {
-    "id": 2, 
-    "make": "Maestro",
-    "model": "PS-1A Phase Shifter",
-    "trim": "",
-    "family": "phaser", 
-    "songIDs": [3]
-  },
-  {
-    "id": 3, 
-    "make": "Dunlop",
-    "model": "Cry Baby",
-    "trim": "Classic",
-    "family": "wah", 
-    "songIDs": [3]
-  }, 
-    ...
+    "id": 9,
+    "make": "MXR", 
+    "model": "M117R", 
+    "trim": "NA", 
+    "family": "flanger", 
+    "songIDs": [4]
+  }
 ]
 ```
 
@@ -73,10 +75,6 @@ curl -X GET http://localhost:3000/pedals
 
 ## Related Topics
 
-* [`Pedals`](pg-resource-pedals.md)
-* [`Get pedal by ID`](pg-reference-get-pedal-by-id.md)
-* [`Get song by ID`](pg-reference-get-song-by-id.md)
-
-## Need Help?
-
-We're here to help! For assistance, feel free to contact developer support at pedalgaragesupport@example.com.
+* [Pedals](pg-resource-pedals.md)
+* [Add songs](pg-reference-add-songs.md)
+* [Get pedal by ID](pg-reference-get-pedal-by-id.md)

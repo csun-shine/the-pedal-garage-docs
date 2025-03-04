@@ -1,1 +1,14 @@
-title: The Pedal Garage API
+title: "The Pedal Garage API"
+remote_theme: just-the-docs/just-the-docs
+url: https://csun-shine.github.io/the-pedal-garage-docs
+permalink: pretty
+search_enabled: false
+enable_copy_code_button: true
+heading_anchors: true
+nav_enabled: true
+nav_sort: case_insensitive 
+liquid:
+   error_mode: strict
+   strict_filters: true
+back_to_top: true
+back_to_top_text: "Back to top"

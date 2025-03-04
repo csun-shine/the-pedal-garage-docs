@@ -1,51 +1,52 @@
 ---
-layout: page
+title: Update Pedal
+layout: default
+parent: Pedals Resource
+nav_order: 6
 ---
 
-# API Reference: Update an Existing Song
+# API Reference: Update Pedal
 
-Update a [`song`](pg-resource-songs.md) in the database.
+Update an existing [`pedal`](pg-resource-pedals.md) in the database.
 
 ## Endpoint
 
-To update an existing song in the databse, use the `PATCH /songs/{id}` endpoint.
+To update an existing pedal in the database, use the `PATCH /pedals/{id}` endpoint.
 
-## Request Body Example
+## Request Example
 
 ```shell
-curl -X PATCH  http://localhost:3000/songs/1 \
+curl -X PATCH  http://localhost:3000/pedals/1 \
  -H "Content-Type: application/json" \
  -d '{
-   "year": "1987", 
-   "pedalIDs": [6,7]
+   "family": "fuzz", 
+  "songIDs": [3]
  }'
 ```
 
 ## Return Body Example
 
 ```shell
-[
- {
+{
   "id": 1,
-  "name": "Just Like Heaven",
-  "artist": "The Cure",
-  "year": "1987",
-  "label": "Fiction",
-  "pedalIDs": [6,7]
- }
-]
+  "make": "Electro-Harmonix",
+  "model": "Big Muff",
+  "trim": "Ram's Head",
+  "family": "fuzz",
+  "songIDs": [3]
+}
 ```
 
 ## Resource Properties
 
 | Name | Type | Description |
 | ------------- | ----------- | ----------- |
-| `id` | number | The ID of the song resource to which pedals are attached |
-| `name` | string | The name of the song |
-| `artist` | string | The name of the artist |
-| `year` | number | The year the song was released |
-| `label` | string | The label that published the song |
-| `pedalIDs` | number | The pedal IDs attached to this particular song resource |
+| `id` | number | The ID of the pedal resource to which songs are attached |
+| `make` | string | The make of the pedal |
+| `model` | string | The model of the pedal |
+| `trim` | string | The trim of the pedal, if applicable |
+| `family` | string | The family the pedal belongs to |
+| `songIDs` | number | The song IDs attached to this particular pedal resource |
 
 ## Common Response Codes
 
@@ -59,12 +60,9 @@ curl -X PATCH  http://localhost:3000/songs/1 \
 | 500 Internal Server Error | Error | A generic error occurred on the server. | Start the service and try again. |
 | ECONNREFUSED | Error | Service is offline. | Start the service and try again. |
 
+
 ## Related Topics
 
-* [`Songs`](pg-resource-songs.md)
-* [`Updating pedals`](pg-reference-updating-pedals.md)
-* [`Get pedal by ID`](pg-reference-get-pedal-by-id.md)
-
-## Need Help?
-
-We're here to help! For assistance, feel free to contact developer support at pedalgaragesupport@example.com.
+* [Pedals](pg-resource-pedals.md)
+* [Update songs](pg-reference-update-songs.md)
+* [Get pedal by ID](pg-reference-get-pedal-by-id.md)
