@@ -102,7 +102,3 @@ curl -X GET  http://localhost:3000/pedals?model_like=Man
 * [Pedals](pg-resource-pedals.md)
 * [Update songs](pg-reference-update-songs.md)
 * [Get pedal by ID](pg-reference-get-pedal-by-id.md)
-
-## Need Help?
-
-We're here to help! For assistance, feel free to contact developer support at pedalgaragesupport@example.com.

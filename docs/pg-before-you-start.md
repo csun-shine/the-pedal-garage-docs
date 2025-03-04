@@ -207,7 +207,3 @@ Some common situations that cause errors include:
 
 * [Get Pedals by SongID](tutorials/pg-tutorial-get-pedals-by-songID.md)
 * [Get Songs by PedalID](tutorials/pg-tutorial-get-songs-by-pedalID.md)
-
-## Need Help?
-
-We’re here to help! Feel free to contact developer support at pedalgaragesupport@example.com.

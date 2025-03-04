@@ -150,7 +150,3 @@ Congratulations! You've completed the "Get Pedals by SongID" tutorial. Explore o
 * [Get Pedals by SongID](pg-tutorial-get-pedals-by-songID.md)
 * [Songs](../references/pg-resource-songs.md)
 * [Pedals](../references/pg-resource-pedals.md)
-
-## Need Help?
-
-We’re here to help! Feel free to contact developer support at pedalgaragesupport@example.com.

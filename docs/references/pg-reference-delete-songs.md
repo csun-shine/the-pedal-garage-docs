@@ -53,7 +53,3 @@ curl -X DELETE http://localhost:3000/songs/4
 * [Songs](pg-resource-songs.md)
 * [Delete pedals](pg-reference-delete-pedals.md)
 * [Get song by ID](pg-reference-get-song-by-id.md)
-
-## Need Help?
-
-We're here to help! For assistance, feel free to contact developer support at pedalgaragesupport@example.com.

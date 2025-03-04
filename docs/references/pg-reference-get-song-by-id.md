@@ -62,7 +62,3 @@ curl -X GET http://localhost:3000/songs/1
 * [Songs](pg-resource-songs.md)
 * [Get all songs](pg-reference-get-all-songs.md)
 * [Get pedal by ID](pg-reference-get-pedal-by-id.md)
-
-## Need Help?
-
-We're here to help! For assistance, feel free to contact developer support at pedalgaragesupport@example.com.

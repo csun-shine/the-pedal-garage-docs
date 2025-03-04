@@ -78,7 +78,3 @@ curl -X POST http://localhost:3000/songs \
 * [Songs](pg-resource-songs.md)
 * [Add pedals](pg-reference-add-pedals.md)
 * [Get song by ID](pg-reference-get-song-by-id.md)
-
-## Need Help?
-
-We're here to help! For assistance, feel free to contact developer support at pedalgaragesupport@example.com.

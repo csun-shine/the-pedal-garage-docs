@@ -47,7 +47,3 @@ Detailed reference documents for The Pedal Garage's resources: [API Reference](r
 
 * [Pedal Resource](references/pg-resource-pedals.md)
 * [Song Resource](references/pg-resource-songs.md)
-
-## Support
-
-We're here to help! Feel free to contact developer support at pedalgaragesupport@example.com.
